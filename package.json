@@ -1,0 +1,21 @@
+{
+  "name": "martian-domain",
+  "version": "1.0.0",
+  "description": "basic library of martian",
+  "main": "src/index.js",
+  "files": [
+  	"src/*"
+  ],
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "dependencies": {
+    "sha1":"^1.1.1"
+  },
+  "devDependencies": {
+    "mockjs": "1.0.1-beta2",
+    "expect.js": "latest"
+  },
+  "author": "XuChang",
+  "license": "ISC"
+}
