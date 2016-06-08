@@ -4,5 +4,7 @@
 module.exports = {
     master: 'master',
     slave: 'slave',
-    temp: 'temp'
+    temp: 'temp',
+    debit: "debit",                 // 借方
+    credit: "credit"                // 贷方
 };
