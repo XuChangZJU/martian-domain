@@ -12,7 +12,7 @@ module.exports = {
 	errorSuspiciousAccessToken: {code: 992, message: "可疑的访问令牌"},
 	errorNoAccessRight: {code: 991, message: "该用户没有访问此数据的权限"},
 	errorUnexistedApiMethod: {code: 990, message: "请求了不支持的http方法"},
-	errorDataFormat:{code:989,message:'数据类型非法'},
+	errorDataFormat:{code:989,message:'非法的数据类型'},
 	errorIllegalParam:{code:988,message:'非法的数据参数'},
 	errorIllegalBodyInfo:{code:987,message:'http请求信息不完整'},
 	errorIllegalFileUrl:{code:986,message:'非法的URL'},
@@ -63,7 +63,8 @@ module.exports = {
 	errorShareKeyNotOverSystemLimit: {code: 584, message: "分享钥匙数目不能超过当前系统上限"},
 	errorKeyIsExpired:{code:583,message:'您的钥匙已过期'},
 	errorLockWordUndefined: {code: 582, message: "钥匙原语不能为空"},
-	errorIllegalLockWord: {code: 592, message: "非法的钥匙原语"},
+	errorIllegalLockWord: {code: 572, message: "非法的钥匙原语"},
+	errorGetKeyWord: {code: 571, message: "获取钥匙原语出错"},
 	errorWordTypeUndefined: {code: 581, message: "钥匙原语类型不能为空"},
 	errorKeyInfoUndefined: {code: 580, message: "钥匙不能为空"},
 	errorTempKeyLockWordIsDisposableKeyWord: {code: 579, message: "临时钥匙原语类型只能是一次性原语类型"},
@@ -71,6 +72,12 @@ module.exports = {
 	errorKeyNameNotUndefined: {code: 577, message: "钥匙名称不能为空"},
 	errorKeyAlreadyShare: {code: 576, message: "钥匙已经分享给他了"},
 
+	errorUserHasOtherVisibleKeysOnLock: {code: 560, message: "该用户在该锁上已经有其它的可见钥匙"},
+	errorUpdateKeyExpiredTime: {code: 559, message: "该钥匙的过期时间不能被修改"},
+	errorKeyAlreadyDebit: {code: 558, message: "该钥匙已经被借记了"},
+	errorNoTempKey: {code: 557, message: "该钥匙必须是可以使用的临时钥匙"},
+	errorCreditNoGetKeyWord: {code: 556, message: "被借记的钥匙不能获取原语的"},
+	
 	// 1000 以上是client端自己定义的Error
 	errorRunTime: {code: 2000, message: "运行时异常"},
 	errorFailToAccessServer: {code: 1999, message: "无法连接到服务器"},
