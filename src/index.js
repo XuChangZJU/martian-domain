@@ -10,5 +10,6 @@ module.exports= {
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
     objectUtils : require("./utils/objectUtils"),
-    maskUtils : require("./utils/maskUtils")
+    maskUtils : require("./utils/maskUtils"),
+    validator: require("./validator/validator")
 };
