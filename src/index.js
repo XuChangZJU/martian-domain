@@ -6,6 +6,7 @@ module.exports= {
     errorCode : require("./constants/errorCode"),
     bleConstant : require("./constants/bleConstant"),
     keyActionType : require("./constants/keyActionType"),
+    houseState: require("./constants/houseState"),
     identificationStatus: require("./constants/identificationStatus"),
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
