@@ -4,5 +4,6 @@ module.exports = {
 	unlock: 1,
 	confirm: 2,
 	dfu: 3,
-	getKeyWord: 4
+	getKeyWord: 4,
+	confirmOutdate: 5
 }

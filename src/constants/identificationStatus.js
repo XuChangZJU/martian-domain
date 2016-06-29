@@ -6,5 +6,6 @@
 module.exports = {
     toBeVerified: 1,
     verifying: 2,
-    verified: 3
+    verified: 3,
+    denied: 4
 }
