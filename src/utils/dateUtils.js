@@ -87,9 +87,9 @@ function getScale(scale, date) {
     }
     switch(scale) {
         case "y":
-            return date.getYear();
+            return date.getFullYear();
         case "m":
-            return date.getMonth();
+            return date.getMonth() + 1;
         case "d":
             return date.getDate();
         case "h":
