@@ -1,6 +1,9 @@
 'use strict';
 
-function dateToString(date,fmt){
+function dateToString(date, fmt){
+    if(!date instanceof Date) {
+        date = new Date(date);
+    }
     var o = {
         "M+": date.getMonth() + 1, //月份 
         "d+": date.getDate(), //日 
@@ -44,10 +47,15 @@ function dateDiff(scale, date1, date2) {
             return parseInt(part / 1000);
         case "l":
             return parseInt(part);
+        default:
+            throw new Error("不能识别的scale单位");
     }
 }
 
 function dateAdd(scale, number, date) {
+    if(!date instanceof Date) {
+        date = new Date(date);
+    }
     switch (scale.toLowerCase()) {
         case "y":
             date.setFullYear(date.getFullYear() + number);
@@ -68,6 +76,7 @@ function dateAdd(scale, number, date) {
             date.setSeconds(date.getSeconds() + number);
             break;
         default:
+            throw new Error("不能识别的scale单位");
     }
     return date;
 }
@@ -85,7 +94,7 @@ function getScale(scale, date) {
             return date.getDate();
         case "h":
             return date.getHours();
-        case "m":
+        case "n":
             return date.getMinutes();
         case "s":
             return date.getSeconds();
