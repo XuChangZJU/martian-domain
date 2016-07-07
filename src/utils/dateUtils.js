@@ -48,9 +48,6 @@ function dateDiff(scale, date1, date2) {
 }
 
 function dateAdd(scale, number, date) {
-    if(!(date instanceof Date)){
-        date = new Date(date);
-    }
     switch (scale.toLowerCase()) {
         case "y":
             date.setFullYear(date.getFullYear() + number);
@@ -75,8 +72,31 @@ function dateAdd(scale, number, date) {
     return date;
 }
 
+function getScale(scale, date) {
+    if(!(date instanceof Date)){
+        date = new Date(date);
+    }
+    switch(scale) {
+        case "y":
+            return date.getYear();
+        case "m":
+            return date.getMonth();
+        case "d":
+            return date.getDate();
+        case "h":
+            return date.getHours();
+        case "m":
+            return date.getMinutes();
+        case "s":
+            return date.getSeconds();
+        case "l":
+            return date.getMilliseconds();
+        default:
+            throw new Error("不能识别的scale单位");
+    }
+}
 
-var dayNames = new Array("周日","周一","周二","周三","周四","周五","周六");
+const dayNames = new Array("周日","周一","周二","周三","周四","周五","周六");
 
 //得到星期
 function getWeek(date) {
@@ -88,6 +108,7 @@ function getWeek(date) {
 module.exports = {
     dateToString,
     dateDiff,
+    getScale,
     dateAdd,
     getWeek
 };
