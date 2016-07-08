@@ -6,9 +6,10 @@
 module.exports = {
     incomplete: 0,              // 未完成
     denied: 10,                 // 被拒绝
-    inVerifying: 20,            // 审核中
+    inVerifying: 20,           // 审核中
     offline: 30,                // 下线
-    free: 40,                   // 上线无租约
+    free: 40,                   // 已上线无租约
     rented: 50,                 // 有租约
-    willFree: 60                // 有租约但即将到期
+    willFree: 60,               // 有租约但即将到期,
+    willOffline: 70            // 有租约但到期后下线
 };

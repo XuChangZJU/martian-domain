@@ -7,6 +7,7 @@ module.exports= {
     bleConstant : require("./constants/bleConstant"),
     keyActionType : require("./constants/keyActionType"),
     houseState: require("./constants/houseState"),
+    leaseState: require("./constants/leaseState"),
     identificationStatus: require("./constants/identificationStatus"),
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
