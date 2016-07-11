@@ -13,6 +13,7 @@ module.exports= {
     stringUtils : require("./utils/stringUtils"),
     objectUtils : require("./utils/objectUtils"),
     maskUtils : require("./utils/maskUtils"),
+    netUtils: require("./utils/netUtils"),
     versionUtils: require("./utils/versionUtils"),
     validator: require("./validator/validator")
 };
