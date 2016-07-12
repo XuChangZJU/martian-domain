@@ -60,7 +60,7 @@ module.exports = {
 	errorCurrentUserNotAccessToData: {code: 587, message: "当前用户没有操作此数据的权限"},
 	errorKeyNotExist: {code: 586, message: "钥匙不存在"},
 	errorMasterKeyNotDeleted: {code: 585, message: "主钥匙不能被删除"},
-	errorShareKeyNotOverSystemLimit: {code: 584, message: "分享钥匙数目不能超过当前系统上限"},
+	errorShareKeyCountReachLimit: {code: 584, message: "分享钥匙数目不能超过"},
 	errorKeyIsExpired:{code:583,message:'您的钥匙已过期'},
 	errorLockWordUndefined: {code: 582, message: "钥匙原语不能为空"},
 	errorIllegalLockWord: {code: 572, message: "非法的钥匙原语"},
