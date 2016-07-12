@@ -72,7 +72,7 @@ module.exports = {
 	errorKeyNameNotUndefined: {code: 577, message: "钥匙名称不能为空"},
 	errorKeyAlreadyShare: {code: 576, message: "钥匙已经分享给他了"},
 
-	errorUserHasOtherVisibleKeysOnLock: {code: 560, message: "该用户在该锁上已经有其它的可见钥匙"},
+	errorUserHasActiveKeysOnLock: {code: 560, message: "该用户在该锁上已经有其它的可用钥匙"},
 	errorUpdateKeyExpiredTime: {code: 559, message: "该钥匙的过期时间不能被修改"},
 	errorKeyAlreadyDebit: {code: 558, message: "该钥匙已经被借记了"},
 	errorNoTempKey: {code: 557, message: "该钥匙必须是可以使用的临时钥匙"},
