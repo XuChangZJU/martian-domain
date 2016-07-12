@@ -7,7 +7,7 @@ module.exports = {
     toBeVerified: 1,
     verifying: 2,
     denied: 4,
-    creditableLevel1: 10,
-    creditableLevel2: 20,
+    credibleLevel1: 10,
+    credibleLevel2: 20,
     verified: 100
 };
