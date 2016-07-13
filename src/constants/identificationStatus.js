@@ -4,7 +4,8 @@
 "use strict";
 
 module.exports = {
-    toBeVerified: 1,
+    empty: 0,
+    uncompleted: 1,
     verifying: 2,
     denied: 4,
     credibleLevel1: 10,
