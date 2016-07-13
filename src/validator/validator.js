@@ -27,8 +27,8 @@ function isUrl(str) {
     return ((str) &&  (typeof str === "string") && !!str.match(/(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/g));
 }
 
-function isNickName(str) {
-    return str.length > 0;
+function isNickname(str) {
+    return str && typeof str === "string" && str.length > 0;
 }
 
 module.exports = {
@@ -37,5 +37,5 @@ module.exports = {
     isPassword,
     isIdCardNumber,
     isUrl,
-    isNickName
+    isNickname
 };
