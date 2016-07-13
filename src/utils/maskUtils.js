@@ -3,19 +3,16 @@
  */
 "use strict";
 
-function maskIdCardNumber(idCardNumber) {
+function maskIdCard(idCardNumber) {
     if(!idCardNumber instanceof String) {
         throw new Error("身份证号码必须是String类型");
     }
-    return idCardNumber[0]+'****************'+idCardNumber[idCardNumber.length-1];
-    // todo 未测试，待优化
-    /*
-     let begin = idCardNumber.slice(0, 4);
-     let end = idCardNumber.slice(idCardNumber.length -2, 2);
-     for(let i = 0; i < idCardNumber.length -6; i ++) {
-     begin = begin.concat("*");
-     }
-     return begin.concat(end);*/
+    let begin = idCardNumber.slice(0, 4);
+    let end = idCardNumber.slice(idCardNumber.length - 4, 4);
+    for(let i = 0; i < idCardNumber.length - 8; i ++) {
+        begin = begin.concat("*");
+    }
+    return begin.concat(end);
 }
 
 function maskMobile(mobile) {
@@ -26,8 +23,12 @@ function maskMobile(mobile) {
 
 
 function maskName(name) {
-    // todo
-    return name;
+    if(name.length == 2) {
+        return name[0].concat("*");
+    }
+    else {
+        return name[0].concat(name[1]).concat("*");
+    }
 }
 
 
@@ -35,7 +36,7 @@ function maskName(name) {
 
 
 module.exports = {
-    maskIdCardNumber,
+    maskIdCard,
     maskMobile,
     maskName
 }
