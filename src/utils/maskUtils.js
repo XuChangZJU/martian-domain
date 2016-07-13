@@ -23,12 +23,7 @@ function maskMobile(mobile) {
 
 
 function maskName(name) {
-    if(name.length == 2) {
-        return name[0].concat("*");
-    }
-    else {
-        return name[0].concat(name[1]).concat("*");
-    }
+    return "*".concat(name.slice(1));
 }
 
 
