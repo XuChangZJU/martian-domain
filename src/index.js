@@ -15,6 +15,6 @@ module.exports= {
     maskUtils : require("./utils/maskUtils"),
     netUtils: require("./utils/netUtils"),
     versionUtils: require("./utils/versionUtils"),
-    pinYinUtils: require("./utils/pinYinUtils"),
+    pinYinUtils: require("./utils/pinYinUtils2"),
     validator: require("./validator/validator")
 };
