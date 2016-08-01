@@ -31,7 +31,7 @@ const disableEditOption = {
 };
 
 
-export {
-  options as generalOption,
+module.exports =  {
+  generalOption: options,
   disableEditOption,
 };
