@@ -9,6 +9,7 @@ module.exports= {
     houseState: require("./constants/houseState"),
     leaseState: require("./constants/leaseState"),
     identificationStatus: require("./constants/identificationStatus"),
+    imagePickerOptions: require('./constants/imagePickerOptions'),
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
     objectUtils : require("./utils/objectUtils"),
