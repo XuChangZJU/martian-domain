@@ -77,6 +77,9 @@ module.exports = {
 	errorKeyAlreadyDebit: {code: 558, message: "该钥匙已经被借记了"},
 	errorNoTempKey: {code: 557, message: "该钥匙必须是可以使用的临时钥匙"},
 	errorCreditNoGetKeyWord: {code: 556, message: "被借记的钥匙不能获取原语的"},
+
+	// 500以下是house用的信息
+	errorHouseHasBeenOrderedByOthers: {code: 499, message: "该房屋已经被其他租客预订"},
 	
 	// 1000 以上是client端自己定义的Error
 	errorRunTime: {code: 2000, message: "运行时异常"},

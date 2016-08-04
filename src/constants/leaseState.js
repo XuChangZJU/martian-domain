@@ -13,5 +13,5 @@ module.exports = {
 	willBeDenied: 3,		 	// 将被拒绝（房东已经选择了忽略此租客的请求）
 	applying: 10,               // 申请中
 	contracted: 15,			 // 达成意向
-	inContract: 20            	// 生效（执行中）
+	implementation: 20        // 生效（执行中）
 };
