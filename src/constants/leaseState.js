@@ -7,6 +7,7 @@ module.exports = {
 	aborted: -99,              // 提前中止
 	ignored: -8,				 // 忽略（房东不同意租给此租客）
 	outDated: -10,               // 过期（一定时间后无响应）
+	canceled: -8,				// 已取消
 	denied: -5,                 // 被房东拒绝
 	preempted: -3,              // 被别人抢占（抢租下了）
 	completed: -1,            	// 租约完成

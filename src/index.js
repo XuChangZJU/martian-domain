@@ -12,6 +12,8 @@ module.exports= {
 	orderState: require("./constants/orderState"),
 	identificationStatus: require("./constants/identificationStatus"),
 	imagePickerOptions: require('./constants/imagePickerOptions'),
+	leaseStateDecoder: require("./constants/leaseStateDecoder"),
+	houseStateDecoder: require("./constants/houseStateDecoder"),
 
 	dateUtils : require("./utils/dateUtils"),
 	stringUtils : require("./utils/stringUtils"),
