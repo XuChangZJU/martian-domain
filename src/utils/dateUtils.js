@@ -83,7 +83,7 @@ function getScale(scale, date) {
 	if(!(date instanceof Date)){
 		date = new Date(date);
 	}
-	switch(scale) {
+	switch(scale.toLowerCase()) {
 		case "y":
 			return date.getFullYear();
 		case "m":
@@ -103,6 +103,95 @@ function getScale(scale, date) {
 	}
 }
 
+/**
+ * 将时间在精度上对齐
+ * @param scale 精度
+ * @param date 时间
+ * @param left 是否是左区间
+ * @param closed 是否是闭区间
+ */
+function align(scale, date, left, closed) {
+	let date2, millis;
+	if(date instanceof Date){
+		millis = date.valueOf();
+	}
+	else {
+		millis = date;
+		date = new Date(millis)
+	}
+	date2 = new Date(0);
+
+	const scale2 = scale.toLowerCase();
+	if(scale2 === "y") {
+		if(left) {
+			date2.setFullYear(date.getFullYear());
+		}
+		else {
+			date2.setFullYear(date.getFullYear() + 1);
+		}
+	}
+	else {
+		date2.setFullYear(date.getFullYear());
+		if(scale2 === "m") {
+			if(left) {
+				date2.setMonth(date.getMonth());
+			}
+			else {
+				date2.setMonth(date.getMonth() + 1);
+			}
+		}
+		else {
+			date2.setMonth(date.getMonth());
+			if(scale2 === "d") {
+				if(left) {
+					date2.setDate(date.getDate());
+				}
+				else {
+					date2.setDate(date.getDate() + 1);
+				}
+			}
+			else {
+				date2.setDate(date.getDate());
+				if(scale2 === "h") {
+					if(left) {
+						date2.setHours(date.getHours());
+					}
+					else {
+						date2.setHours(date.getHours() + 1);
+					}
+				}
+				else {
+					date2.setHours(date.getHours());
+					if(scale2 === "n") {
+						if(left){
+							date2.setMinutes(date.getMinutes());
+						}
+						else {
+							date2.setMinutes(date.getMinutes() + 1);
+						}
+					}
+					else {
+						throw new Error("目前尚不支持" + scale + "级别的对齐");
+					}
+				}
+			}
+		}
+	}
+	const millis2 = date2.valueOf();
+
+	if(closed) {
+		return millis2;
+	}
+	else {
+		if(left) {
+			return millis2 + 1;
+		}
+		else {
+			return millis2 - 1;
+		}
+	}
+}
+
 const dayNames = new Array("周日","周一","周二","周三","周四","周五","周六");
 
 //得到星期
@@ -117,5 +206,6 @@ module.exports = {
 	dateDiff,
 	getScale,
 	dateAdd,
-	getWeek
+	getWeek,
+	align
 };
