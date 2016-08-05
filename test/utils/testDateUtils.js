@@ -38,4 +38,19 @@ describe("TEST dateUtils", function() {
 		expect(date.getMinutes()).to.eql(dateAlignOnHours.getMinutes());
 		done();
 	});
+
+	it("[Test align 3]", function(done) {
+		let date = new Date();
+		let dateAlignOnHours = new Date(dateUtils.align("n", date, false, true));
+
+		console.log(dateUtils.dateToString(date, "yyyy-MM-dd hh:mm:ss"));
+		console.log(dateUtils.dateToString(dateAlignOnHours, "yyyy-MM-dd hh:mm:ss"));
+
+		expect(date.getFullYear()).to.eql(dateAlignOnHours.getFullYear());
+		expect(date.getMonth()).to.eql(dateAlignOnHours.getMonth());
+		expect(date.getDate()).to.eql(dateAlignOnHours.getDate());
+		expect(date.getHours()).to.eql(dateAlignOnHours.getHours());
+		expect(date.getMinutes()).to.eql(dateAlignOnHours.getMinutes() - 1);
+		done();
+	});
 });
