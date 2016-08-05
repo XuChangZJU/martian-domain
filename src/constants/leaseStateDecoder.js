@@ -14,7 +14,8 @@ const decoder = {
 	[leaseState.willBeDenied]: "将被拒绝",
 	[leaseState.applying]: "求租中",
 	[leaseState.contracted]: "已达成意向",
-	[leaseState.implementation]: "已生效"
+	[leaseState.implementation]: "执行中",
+	[leaseState.willCompleted]: "即将到期"
 };
 
 function decode(state) {
