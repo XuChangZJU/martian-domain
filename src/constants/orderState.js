@@ -6,7 +6,7 @@
 module.exports = {
 	unpaid: 1,
 	partialPayed: 5,
-	payed: 10,
+	paid: 10,
 	outdated: 15,
 	outdatedButPartialPayed: 20
 };
