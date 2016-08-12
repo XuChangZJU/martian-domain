@@ -171,7 +171,18 @@ function align(scale, date, left, closed) {
 						}
 					}
 					else {
-						throw new Error("目前尚不支持" + scale + "级别的对齐");
+						date2.setMinutes(date.getMinutes());
+						if(scale2 === "s") {
+							if(left){
+								date2.setSeconds(date.getSeconds());
+							}
+							else {
+								date2.setSeconds(date.getSeconds() + 1);
+							}
+						}
+						else {
+							throw new Error("当前不支持在" + scale2 + "级别上进行对齐");
+						}
 					}
 				}
 			}
