@@ -4,10 +4,12 @@
 "use strict";
 const leaseState = require("./leaseState");
 const decoder = {
-	[leaseState.aborted]: "已提前中止",
+	[leaseState.violatedByTenant]: "租客违约",
+	[leaseState.abortedByTenant]: "租客提前中止",
+	[leaseState.abortedByLord]: "房东提前中止",
 	[leaseState.ignored]: "已被忽略掉",
 	[leaseState.outDated]: "已过期失效",
-	[leaseState.canceled]: "主动取消",
+	[leaseState.cancelled]: "主动取消",
 	[leaseState.denied]: "被拒绝",
 	[leaseState.preempted]: "已被其他租客租下",
 	[leaseState.completed]: "已完成",
