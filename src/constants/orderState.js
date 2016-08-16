@@ -8,5 +8,6 @@ module.exports = {
 	partialPayed: 5,
 	paid: 10,
 	outdated: 15,
-	outdatedButPartialPayed: 20
+	outdatedButPartialPayed: 20,
+	closed: 99
 };
