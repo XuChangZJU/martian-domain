@@ -4,10 +4,10 @@
 "use strict";
 
 module.exports = {
-	violatedByTenant: -99,	  // 违约（租客）
 	abortedByTenant: -50,      // 提前中止（租客）
 	abortedByLord: -48,		 // 提前中止（房东）
-	ignored: -8,				 // 忽略（房东不同意租给此租客）
+	willAborted: -15,			// 将要提前中止
+	ignored: -12,				 // 忽略（房东不同意租给此租客）
 	outDated: -10,               // 过期（一定时间后无响应）
 	cancelled: -8,				// 已取消
 	denied: -5,                 // 被房东拒绝
