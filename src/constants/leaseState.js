@@ -4,8 +4,8 @@
 "use strict";
 
 module.exports = {
-	abortedByTenant: -50,      // 提前中止（租客）
-	abortedByLord: -48,		 // 提前中止（房东）
+	aborted: -99,      		// 提前中止
+	//abortedByLord: -48,		 // 提前中止（房东）
 	willAborted: -15,			// 将要提前中止
 	ignored: -12,				 // 忽略（房东不同意租给此租客）
 	outDated: -10,               // 过期（一定时间后无响应）
