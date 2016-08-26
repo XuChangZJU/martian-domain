@@ -13,6 +13,7 @@ module.exports= {
 	identificationStatus: require("./constants/identificationStatus"),
 	imagePickerOptions: require('./constants/imagePickerOptions'),
 	leaseStateDecoder: require("./constants/leaseStateDecoder"),
+	leaseStateDecoder2: require("./constants/leaseStateDecoder2"),
 	houseStateDecoder: require("./constants/houseStateDecoder"),
 
 	dateUtils : require("./utils/dateUtils"),
