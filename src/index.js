@@ -17,6 +17,7 @@ module.exports= {
 	houseStateDecoder: require("./constants/houseStateDecoder"),
 	lookState: require("./constants/lookState"),
 	lookStateDecoder: require("./constants/lookStateDecoder"),
+	subSystem: require("./constants/subSystem"),
 
 	dateUtils : require("./utils/dateUtils"),
 	stringUtils : require("./utils/stringUtils"),
