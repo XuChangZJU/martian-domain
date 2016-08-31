@@ -19,6 +19,7 @@ module.exports= {
 	lookStateDecoder: require("./constants/lookStateDecoder"),
 	subSystem: require("./constants/subSystem"),
 	messageWeight: require("./constants/messageWeight"),
+	messageConstant: require("./constants/messageConstant"),
 
 	dateUtils : require("./utils/dateUtils"),
 	stringUtils : require("./utils/stringUtils"),
