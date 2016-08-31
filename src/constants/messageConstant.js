@@ -45,14 +45,14 @@ const words = {
 
 module.exports = {
 	coreServer: {
-		getSharedKey: {
+		sharedKeyGot: {
 			weight: weight.low,
 			word: words.share,
 			title: "您已获得一把分享钥匙",
 			type: "getSharedKey",
 			entities: ["key"]
 		},
-		loseSharedKey: {
+		sharedKeyLost: {
 			weight: weight.low,
 			word: words.share,
 			title: "您已失去一把分享钥匙",
@@ -226,19 +226,19 @@ module.exports = {
 			entities: ["lease"],
 			subSystemId: subSystem.rent
 		},
-		houseOnlined: {
+		houseBeingOnline: {
 			weight: weight.high,
 			word: words.online,
 			title: "您的房屋已经上线",
 			icon: icons.happy,
-			type: "houseOnlined",
+			type: "houseBeingOnline",
 			entities: ["house"],
 			subSystemId: subSystem.rent
 		},
 		houseDenied: {
 			weight: weight.high,
 			word: words.rent,
-			title: "有人求租您的房屋",
+			title: "您的房屋被拒绝上线",
 			icon: icons.fail,
 			type: "houseDenied",
 			entities: ["house"],
