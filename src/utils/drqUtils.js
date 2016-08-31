@@ -5,7 +5,7 @@
 "use strict";
 const assign = require("lodash/assign");
 
-module.exports = function (req) {
+function destructRequestOptions(req) {
 	let result = assign({}, req.query);
 	if(result.indexFrom) {
 		result.indexFrom = parseInt(result.indexFrom, 10);
@@ -24,4 +24,9 @@ module.exports = function (req) {
 
 	return result;
 }
+
+
+module.exports = {
+	destructRequestOptions
+};
 
