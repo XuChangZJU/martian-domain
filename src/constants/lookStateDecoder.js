@@ -12,6 +12,7 @@ const stateDecoder = {
 	[LookState.invalid5]: "已取消",
 	[LookState.invalid6]: "已过期",
 	[LookState.init]: "",
+	[LookState.ordered]: "待支付",
 	[LookState.avail1]: "看房路上",
 	[LookState.avail2]: "联系租客",
 	[LookState.looking]: "看房中",

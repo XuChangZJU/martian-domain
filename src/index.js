@@ -17,6 +17,7 @@ module.exports= {
 	houseStateDecoder: require("./constants/houseStateDecoder"),
 	lookState: require("./constants/lookState"),
 	lookStateDecoder: require("./constants/lookStateDecoder"),
+	lookPayType: require("./constants/lookPayType"),
 	subSystem: require("./constants/subSystem"),
 	messageWeight: require("./constants/messageWeight"),
 	messageConstant: require("./constants/messageConstant"),
