@@ -18,6 +18,7 @@ module.exports= {
 	lookState: require("./constants/lookState"),
 	lookStateDecoder: require("./constants/lookStateDecoder"),
 	subSystem: require("./constants/subSystem"),
+	messageWeight: require("./constants/messageWeight"),
 
 	dateUtils : require("./utils/dateUtils"),
 	stringUtils : require("./utils/stringUtils"),
@@ -27,6 +28,6 @@ module.exports= {
 	versionUtils: require("./utils/versionUtils"),
 	pinYinUtils: require("./utils/pinYinUtils2"),
 	drqUtils: require("./utils/drqUtils"),
-	
+
 	validator: require("./validator/validator")
 };
