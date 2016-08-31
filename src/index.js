@@ -26,5 +26,7 @@ module.exports= {
 	netUtils: require("./utils/netUtils"),
 	versionUtils: require("./utils/versionUtils"),
 	pinYinUtils: require("./utils/pinYinUtils2"),
+	drqUtils: require("./utils/drqUtils"),
+	
 	validator: require("./validator/validator")
 };
