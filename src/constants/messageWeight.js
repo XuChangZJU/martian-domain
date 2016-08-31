@@ -4,6 +4,7 @@
 "use strict";
 
 module.exports = {
+	tiny: 10,
 	low: 10,
 	medium: 20,
 	high: 60,
