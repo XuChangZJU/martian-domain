@@ -3,7 +3,7 @@
  */
 "use strict";
 const weight = require("./messageWeight");
-const subSystem = require("./subSystem");
+const client = require("./client");
 
 const icons = {
 	warning: {
@@ -41,7 +41,7 @@ const words = {
 	violate: "违",
 	push: "催",
 	online: "上"
-}
+};
 
 module.exports = {
 	coreServer: {
@@ -134,7 +134,7 @@ module.exports = {
 			icon: icons.happy,
 			type: "leaseContracted",
 			entities: ["lease"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		},
 		leaseDenied: {
 			weight: weight.high,
@@ -143,7 +143,7 @@ module.exports = {
 			icon: icons.deny,
 			type: "leaseDenied",
 			entities: ["lease"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		},
 		leaseOutdated: {
 			weight: weight.high,
@@ -152,7 +152,7 @@ module.exports = {
 			icon: icons.deny,
 			type: "leaseOutdated",
 			entities: ["lease"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		},
 		leasePreempted: {
 			weight: weight.high,
@@ -161,7 +161,7 @@ module.exports = {
 			icon: icons.fail,
 			type: "leasePreempted",
 			entities: ["lease"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		},
 		orderCreated: {
 			weight: weight.top,
@@ -170,7 +170,7 @@ module.exports = {
 			icon: icons.money,
 			type: "orderCreated",
 			entities: ["order"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		},
 		fireLineReachedToTenant: {
 			weight: weight.top,
@@ -179,7 +179,7 @@ module.exports = {
 			icon: icons.money,
 			type: "fireLineReachedToTenant",
 			entities: ["order"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		},
 		fireLineReachedToLord: {
 			weight: weight.low,
@@ -188,7 +188,7 @@ module.exports = {
 			icon: icons.money,
 			type: "fireLineReachedToLord",
 			entities: ["leasePay"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		},
 		deadlineReachedToTenant: {
 			weight: weight.top,
@@ -197,7 +197,7 @@ module.exports = {
 			icon: icons.fail,
 			type: "deadlineReachedToTenant",
 			entities: ["lease"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		},
 		deadlineReachedToLord: {
 			weight: weight.top,
@@ -206,7 +206,7 @@ module.exports = {
 			icon: icons.fail,
 			type: "deadlineReachedToLord",
 			entities: ["lease"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		},
 		orderedLeasePreempted: {
 			weight: weight.high,
@@ -215,7 +215,7 @@ module.exports = {
 			icon: icons.fail,
 			type: "orderedLeasePreempted",
 			entities: ["lease"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		},
 		leaseApplying: {
 			weight: weight.high,
@@ -224,7 +224,7 @@ module.exports = {
 			icon: icons.happy,
 			type: "leaseApplying",
 			entities: ["lease"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		},
 		houseBeingOnline: {
 			weight: weight.high,
@@ -233,7 +233,7 @@ module.exports = {
 			icon: icons.happy,
 			type: "houseBeingOnline",
 			entities: ["house"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		},
 		houseDenied: {
 			weight: weight.high,
@@ -242,7 +242,7 @@ module.exports = {
 			icon: icons.fail,
 			type: "houseDenied",
 			entities: ["house"],
-			subSystemId: subSystem.rent
+			clientId: client.rent
 		}
 	},
 }
