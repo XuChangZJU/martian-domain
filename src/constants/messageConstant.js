@@ -124,11 +124,11 @@ module.exports = {
 			type: "debitKeyExpired",
 			entities: ["key"]
 		},
-		masterKeyRecoveredForDebit: {
+		masterKeyRecoveredFromDebit: {
 			weight: weight.tiny,
 			word: words.key,
 			title: "您的钥匙已经被归还",
-			type: "masterKeyRecoveredForDebit",
+			type: "masterKeyRecoveredFromDebit",
 			entities: ["key"]
 		},
 		suspiciousLogIn: {
