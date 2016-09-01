@@ -80,12 +80,27 @@ module.exports = {
 			type: "sharedKeyEdited",
 			entities: ["key"]
 		},
-		tempKeyOutdated: {
+		sharedKeyExpired: {
+			weight: weight.medium,
+			word: words.key,
+			title: "您的分享钥匙已经过期",
+			type: "sharedKeyExpired",
+			entities: ["key"]
+		},
+		usedTempKeyExpired: {
 			weight: weight.high,
 			word: words.warning,
-			title: "您有未确认的临时钥匙已经过期",
+			title: "您有需要确认离开的临时钥匙！",
 			icon: icons.warning,
-			type: "tempKeyOutdated",
+			type: "usedTempKeyExpired",
+			entities: ["key"]
+		},
+		unUsedTempKeyExpired: {
+			weight: weight.tiny,
+			word: words.key,
+			title: "您临时钥匙已经失效",
+			icon: icons.warning,
+			type: "unUsedTempKeyExpired",
 			entities: ["key"]
 		},
 		debitKeyExtended: {
