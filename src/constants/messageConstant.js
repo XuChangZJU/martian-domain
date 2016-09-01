@@ -40,7 +40,8 @@ const words = {
 	fail: "失",
 	violate: "违",
 	push: "催",
-	online: "上"
+	online: "上",
+	return :"退"
 };
 
 module.exports = {
@@ -211,9 +212,9 @@ module.exports = {
 		},
 		fireLineReachedToTenant: {
 			weight: weight.top,
-			word: words.rent,
+			word: words.warning,
 			title: "您的订单亟需支付",
-			icon: icons.money,
+			icon: icons.warning,
 			type: "fireLineReachedToTenant",
 			entities: ["order"],
 			clientId: client.rent
@@ -245,13 +246,22 @@ module.exports = {
 			entities: ["lease"],
 			clientId: client.rent
 		},
-		orderedLeasePreempted: {
+		rentalReturned: {
 			weight: weight.high,
-			word: words.fail,
-			title: "您求租的房屋已被别人租下",
+			word: words.return,
+			title: "您的租金已经被退回",
 			icon: icons.fail,
-			type: "orderedLeasePreempted",
-			entities: ["lease"],
+			type: "rentalReturned",
+			entities: ["order"],
+			clientId: client.rent
+		},
+		depositAvailable: {
+			weight: weight.high,
+			word: words.return,
+			title: "您的押金已经解冻",
+			icon: icons.fail,
+			type: "depositAvailable",
+			entities: ["order"],
 			clientId: client.rent
 		},
 		leaseApplying: {
