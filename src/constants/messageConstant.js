@@ -49,14 +49,14 @@ module.exports = {
 			weight: weight.low,
 			word: words.share,
 			title: "您已获得一把分享钥匙",
-			type: "getSharedKey",
+			type: "sharedKeyGot",
 			entities: ["key"]
 		},
 		sharedKeyLost: {
 			weight: weight.low,
 			word: words.share,
 			title: "您已失去一把分享钥匙",
-			type: "loseSharedKey",
+			type: "sharedKeyLost",
 			entities: ["key"]
 		},
 		idPassed: {
@@ -99,7 +99,6 @@ module.exports = {
 			weight: weight.tiny,
 			word: words.key,
 			title: "您临时钥匙已经失效",
-			icon: icons.warning,
 			type: "unUsedTempKeyExpired",
 			entities: ["key"]
 		},
@@ -192,19 +191,28 @@ module.exports = {
 			entities: ["lease"],
 			clientId: client.rent
 		},
-		orderCreated: {
+		orderCreatedToTenant: {
 			weight: weight.top,
 			word: words.rent,
 			title: "您有订单需要支付",
 			icon: icons.money,
-			type: "orderCreated",
+			type: "orderCreatedToTenant",
 			entities: ["order"],
+			clientId: client.rent
+		},
+		orderCreatedToLord: {
+			weight: weight.low,
+			word: words.rent,
+			title: "已为您向您的租客催租",
+			icon: icons.money,
+			type: "orderCreatedToLord",
+			entities: ["leasePay"],
 			clientId: client.rent
 		},
 		fireLineReachedToTenant: {
 			weight: weight.top,
 			word: words.rent,
-			title: "您的订单已经逼近警戒线",
+			title: "您的订单亟需支付",
 			icon: icons.money,
 			type: "fireLineReachedToTenant",
 			entities: ["order"],
