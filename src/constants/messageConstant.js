@@ -273,6 +273,24 @@ module.exports = {
 			entities: ["lease"],
 			clientId: client.rent
 		},
+		leasePayOrderedToTenant: {
+			weight: weight.low,
+			word: words.rent,
+			title: "您已完成合同规定的一次支付",
+			icon: icons.money,
+			type: "leasePayOrderedToTenant",
+			entities: ["leasePay"],
+			clientId: client.rent
+		},
+		leasePayOrderedToLord: {
+			weight: weight.medium,
+			word: words.rent,
+			title: "您收到一笔房租",
+			icon: icons.money,
+			type: "leasePayOrderedToLord",
+			entities: ["leasePay"],
+			clientId: client.rent
+		},
 		houseBeingOnline: {
 			weight: weight.high,
 			word: words.online,
