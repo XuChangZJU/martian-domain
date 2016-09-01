@@ -117,6 +117,20 @@ module.exports = {
 			type: "sharedKeyExtended",
 			entities: ["key"]
 		},
+		debitKeyExpired: {
+			weight: weight.tiny,
+			word: words.key,
+			title: "您的借记钥匙已经归还",
+			type: "debitKeyExpired",
+			entities: ["key"]
+		},
+		masterKeyRecoveredForDebit: {
+			weight: weight.tiny,
+			word: words.key,
+			title: "您的钥匙已经被归还",
+			type: "masterKeyRecoveredForDebit",
+			entities: ["key"]
+		},
 		suspiciousLogIn: {
 			weight: weight.top,
 			word: words.warning,
