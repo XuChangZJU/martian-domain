@@ -19,8 +19,9 @@ module.exports= {
 	lookStateDecoder: require("./constants/lookStateDecoder"),
 	lookPayType: require("./constants/lookPayType"),
 	client: require("./constants/client"),
-	messageWeight: require("./constants/messageWeight"),
 	messageConstant: require("./constants/messageConstant"),
+	userConstant: require("./constants/userConstant"),
+	roleConstant: require("./constants/roleConstant"),
 
 	dateUtils : require("./utils/dateUtils"),
 	stringUtils : require("./utils/stringUtils"),
