@@ -18,7 +18,6 @@ module.exports= {
 	lookState: require("./constants/lookState"),
 	lookStateDecoder: require("./constants/lookStateDecoder"),
 	lookPayType: require("./constants/lookPayType"),
-	client: require("./constants/client"),
 	messageConstant: require("./constants/messageConstant"),
 	userConstant: require("./constants/userConstant"),
 	roleConstant: require("./constants/roleConstant"),
