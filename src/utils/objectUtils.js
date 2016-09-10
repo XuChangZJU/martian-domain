@@ -27,7 +27,10 @@ function compareObject(v1, v2) {
         return v1.toString() === v2.toString();
     }
 
-    if (v1 instanceof Object && v2 instanceof Object) {
+    if (typeof v1 === "object" && typeof v2 === "object") {
+        if(v1 instanceof Date && v2 instanceof Date) {
+            return v1.valueOf() === v2.valueOf();
+        }
         if (countProps(v1) !== countProps(v2)) {
             return false;
         }
