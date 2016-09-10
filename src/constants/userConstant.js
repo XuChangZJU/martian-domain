@@ -18,8 +18,8 @@ module.exports = {
 		nickname: "码天租房"
 	},
 	martianRentBackend: {
-		id: 1003,
-		mobile: "13000001003",
+		id: 1002,
+		mobile: "13000001002",
 		nickname: "码天租房后台进程"
 	}
 };
