@@ -36,7 +36,9 @@ module.exports = {
 	errorVerificationTimeOut:{code:684,message:'验证超时，请重新验证'},
 	errorSameMobile:{code:683,message:'该手机号与当前使用的手机号相同'},
 	errorUserHasBeenDisabled:{code: 682, message: "用户已经被禁用，原因是"},
-	errorIdCardNumberUnMatched:{code: 681, message: '身份证号输入错误，请重新输入'},
+	errorIdCardNumberUnMatched:{code: 681, message: "身份证号输入错误，请重新输入"},
+	errorUserHasNotIdentified: {code: 682, message: "用户尚未进行身份验证"},
+    errorUserIdentificationUncompleted: {code: 683, message: "用户的身份验证尚未完成"},
 
 
 
