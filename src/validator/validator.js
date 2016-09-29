@@ -23,12 +23,11 @@ function isIdCardNumber(text) {
 
 // todo untested
 function isUrl(str) {
-
     return ((str) &&  (typeof str === "string") && !!str.match(/(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/g));
 }
 
 function isNickname(str) {
-    return str && typeof str === "string" && str.length > 0;
+    return str && typeof str === "string" && str.trim().length > 0 && str.length < 16;
 }
 
 module.exports = {
