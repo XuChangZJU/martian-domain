@@ -22,6 +22,9 @@ module.exports= {
     messageConstant: require("./constants/messageConstant"),
     userConstant: require("./constants/userConstant"),
     roleConstant: require("./constants/roleConstant"),
+    identificationStatus2: require("./constants/identificationStatus2"),
+    idStatus2Decoder: require("./constants/idStatus2Decoder"),
+    idStatus2Decoder2: require("./constants/idStatus2Decoder2"),
 
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
