@@ -10,7 +10,8 @@ const decoder = {
     [idStatus.uncertain2]: "验证中",
     [idStatus.uncertain3]: "验证中",
     [idStatus.illegal]: "实名认证未获通过",
-    [idStatus.intermediate]: "实名认证已通过",
+    [idStatus.imageAcceptable]: "实名认证已通过",
+    [idStatus.imageReceived]: "身份证图像已上传",
     [idStatus.legal]: "身份认证已经完成"
 };
 
