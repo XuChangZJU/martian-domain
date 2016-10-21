@@ -40,6 +40,7 @@ module.exports = {
 	errorUserHasNotIdentified: {code: 682, message: "用户尚未进行身份验证"},
     errorUserIdentificationUncompleted: {code: 683, message: "用户的身份验证尚未完成"},
 	errorIdInfoExisted: {code: 684, message: "该身份信息已经存在"},
+	errorIdInfoNotMatched: {code: 685, message: "身份信息验证不匹配"},
 
 
 
