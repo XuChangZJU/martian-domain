@@ -39,6 +39,7 @@ module.exports = {
 	errorIdCardNumberUnMatched:{code: 681, message: "身份证号输入错误，请重新输入"},
 	errorUserHasNotIdentified: {code: 682, message: "用户尚未进行身份验证"},
     errorUserIdentificationUncompleted: {code: 683, message: "用户的身份验证尚未完成"},
+	errorIdInfoExisted: {code: 684, message: "该身份信息已经存在"},
 
 
 
