@@ -1,6 +1,6 @@
 {
   "name": "martian-domain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "basic library of martian",
   "main": "src/index.js",
   "files": [
