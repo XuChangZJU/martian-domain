@@ -25,6 +25,8 @@ module.exports= {
     identificationStatus2: require("./constants/identificationStatus2"),
     idStatus2Decoder: require("./constants/idStatus2Decoder"),
     idStatus2Decoder2: require("./constants/idStatus2Decoder2"),
+    payConstant: require("./constants/payConstant"),
+    withDrawConstant: require("./constants/withDrawConstant"),
 
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),

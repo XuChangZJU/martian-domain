@@ -7,9 +7,11 @@ const decoder = {
 	[orderState.unpaid]: "未支付",
 	[orderState.partialPayed]: "部分支付",
 	[orderState.paid]: "已支付",
-	[orderState.outdated]: "已过期失效",
-	[orderState.outdatedButPartialPayed]: "已过期但部分支付",
-	[orderState.closed]: "已关闭"
+	[orderState.paying]: "正在支付",
+	[orderState.closed1]: "已关闭（支付成功）",
+	[orderState.closed2]: "已关闭（退款成功）",
+	[orderState.closed3]: "已关闭（支付失败）",
+    [orderState.failed]: "付款失败",
 };
 
 function decode(state) {
