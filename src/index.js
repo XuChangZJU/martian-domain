@@ -27,6 +27,7 @@ module.exports= {
     idStatus2Decoder2: require("./constants/idStatus2Decoder2"),
     payConstant: require("./constants/payConstant"),
     withDrawConstant: require("./constants/withDrawConstant"),
+    orderType: require("./constants/orderType"),
 
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
