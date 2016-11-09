@@ -17,6 +17,7 @@ module.exports = {
 	errorIllegalBodyInfo:{code:987,message:'http请求信息不完整'},
 	errorIllegalFileUrl:{code:986,message:'非法的URL'},
 	errorInvalidAccessTokenOrRefreshToken: {code:985, message:'访问令牌或刷新令牌非法'},
+	errorVersionTooLow: {code: 984, message: '应用的版本过低'},
 
 	//User相关error信息
 	errorMobileUndefined: {code: 699, message: "手机号不能为空"},
