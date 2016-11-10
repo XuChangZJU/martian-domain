@@ -28,7 +28,7 @@ module.exports= {
     payConstant: require("./constants/payConstant"),
     withDrawConstant: require("./constants/withDrawConstant"),
     orderType: require("./constants/orderType"),
-    orderTypeDecoder: require("./constants/orderStateDecoder"),
+    orderTypeDecoder: require("./constants/orderTypeDecoder"),
 
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
