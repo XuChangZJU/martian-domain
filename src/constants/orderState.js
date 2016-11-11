@@ -8,7 +8,8 @@ module.exports = {
     paying: 3,
     partialPayed: 5,
     paid: 10,
-    returning: 20,
+    refundingToClosed2: 20,
+    refundingToFailed: 30,
     failed: 51,
     closed1: 101,       // 支付成功且关闭
     closed2: 105,       // 退款成功且关闭
