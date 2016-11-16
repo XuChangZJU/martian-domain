@@ -42,7 +42,7 @@ module.exports = {
     errorUserIdentificationUncompleted: {code: 683, message: "用户的身份验证尚未完成"},
 	errorIdInfoExisted: {code: 684, message: "该身份信息已经存在"},
 	errorIdInfoNotMatched: {code: 685, message: "身份信息验证不匹配"},
-	errorTradePasswordUnset: {code: 686, messag: "用户的交易密码尚未设置"},
+	errorTradePasswordUnset: {code: 686, message: "用户的交易密码尚未设置"},
 
 
 
