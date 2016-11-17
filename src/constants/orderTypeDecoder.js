@@ -9,6 +9,7 @@ const decoder = {
     [orderType.looking]: "看房金",
     [orderType.compensate]: "续约金",
     [orderType.tax]: "平台扣款",
+    [orderType.coupon]: "平台奖金"
 };
 
 function decode(state) {
