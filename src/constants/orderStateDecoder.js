@@ -5,7 +5,7 @@
 const orderState = require("./orderState");
 const decoder = {
 	[orderState.unpaid]: "未支付",
-	[orderState.partialPayed]: "部分支付",
+	[orderState.partialPaid]: "部分支付",
 	[orderState.paid]: "已支付",
 	[orderState.paying]: "支付中",
     [orderState.refundingToClosed2]: "退款中",
