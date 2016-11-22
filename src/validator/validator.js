@@ -9,7 +9,7 @@ function isMobile(text) {
 }
 
 function isPassword(text) {
-    return ((text) && (typeof text === "string") && (text.length>=8))
+    return ((text) && (typeof text === "string") && (text.length >= 8))
 
 }
 
@@ -18,7 +18,7 @@ function isCaptcha(text) {
 }
 
 function isIdCardNumber(text) {
-    return ((text)  && (typeof text === "string") && (/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(text)))
+    return ((typeof text === "string") && text.length===18 && (/^\d{6}(18|19|20)\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(text)))
 }
 
 // todo untested
