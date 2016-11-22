@@ -17,6 +17,7 @@ module.exports = {
 	errorIllegalBodyInfo:{code:987,message:'http请求信息不完整'},
 	errorIllegalFileUrl:{code:986,message:'非法的URL'},
 	errorInvalidAccessTokenOrRefreshToken: {code:985, message:'访问令牌或刷新令牌非法'},
+	errorVersionTooLow: {code: 984, message: '应用的版本过低'},
 
 	//User相关error信息
 	errorMobileUndefined: {code: 699, message: "手机号不能为空"},
@@ -41,6 +42,7 @@ module.exports = {
     errorUserIdentificationUncompleted: {code: 683, message: "用户的身份验证尚未完成"},
 	errorIdInfoExisted: {code: 684, message: "该身份信息已经存在"},
 	errorIdInfoNotMatched: {code: 685, message: "身份信息验证不匹配"},
+	errorTradePasswordUnset: {code: 686, message: "用户的交易密码尚未设置"},
 
 
 

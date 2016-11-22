@@ -1,7 +1,7 @@
 'use strict';
 
 function dateToString(date, fmt){
-	if(!date instanceof Date) {
+	if(!(date instanceof Date) && typeof date === 'number') {
 		date = new Date(date);
 	}
 	var o = {
