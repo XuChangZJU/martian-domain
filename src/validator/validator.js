@@ -9,7 +9,7 @@ function isMobile(text) {
 }
 
 function isPassword(text) {
-    return ((text) && (typeof text === "string") && (text.length>=8))
+    return ((text) && (typeof text === "string") && (text.length >= 8))
 
 }
 
@@ -18,12 +18,15 @@ function isCaptcha(text) {
 }
 
 function isIdCardNumber(text) {
-    return ((text)  && (typeof text === "string") && (/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(text)))
+    return ((typeof text === "string") && text.length===18 && (/^\d{6}(18|19|20)\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(text)))
 }
 
 // todo untested
 function isUrl(str) {
-    return ((str) &&  (typeof str === "string") && !!str.match(/(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/g));
+    // return ((str) &&  (typeof str === "string") && !!str.match(/(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/g));
+    const regex = /^((ftp|http|https):\/\/)?(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?$/;
+    return (typeof str === "string") && regex.test(str);
+
 }
 
 function isNickname(str) {
