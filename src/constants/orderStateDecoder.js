@@ -8,6 +8,7 @@ const decoder = {
 	[orderState.partialPaid]: "部分支付",
 	[orderState.paid]: "已支付",
 	[orderState.paying]: "支付中",
+	[orderState.waitingForExternal]: "等待支付完成",
     [orderState.refundingToClosed2]: "退款中",
 	[orderState.refundingToFailed]: "退款中",
 	[orderState.closed1]: "已关闭（支付成功）",

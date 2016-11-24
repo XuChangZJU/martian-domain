@@ -6,6 +6,7 @@
 module.exports = {
     unpaid: 1,
     paying: 3,
+    waitingForExternal: 4,
     partialPaid: 5,
     paid: 10,
     refundingToClosed2: 20,
