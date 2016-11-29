@@ -11,7 +11,6 @@ module.exports= {
     leasePayType: require("./constants/leasePayType"),
     orderState: require("./constants/orderState"),
     orderStateDecoder: require("./constants/orderStateDecoder"),
-    identificationStatus: require("./constants/identificationStatus"),
     imagePickerOptions: require('./constants/imagePickerOptions'),
     leaseStateDecoder: require("./constants/leaseStateDecoder"),
     leaseStateDecoder2: require("./constants/leaseStateDecoder2"),
@@ -38,6 +37,7 @@ module.exports= {
     versionUtils: require("./utils/versionUtils"),
     pinYinUtils: require("./utils/pinYinUtils2"),
     drqUtils: require("./utils/drqUtils"),
+    urlUtils: require("./utils/urlUtils"),
 
     validator: require("./validator/validator")
 };
