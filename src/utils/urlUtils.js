@@ -2,6 +2,7 @@
  * Created by Administrator on 2016/11/29.
  */
 "use strict";
+const assert = require('assert');
 
 function genGetListUrl(api, indexFrom, count, sort, query, extras) {
     let url = `${api}`;
@@ -46,7 +47,8 @@ function genGetListUrl(api, indexFrom, count, sort, query, extras) {
 }
 
 function genItemUrl(api, id) {
-    return api.endsWith('/') ? (api + id) : `${api}/${id}`;
+    assert(api.endsWith(':id'));
+    return api.replace(':id', id);
 }
 
 function genInitArea(method, body) {
