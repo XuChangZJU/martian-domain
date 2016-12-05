@@ -38,6 +38,7 @@ module.exports= {
     pinYinUtils: require("./utils/pinYinUtils2"),
     drqUtils: require("./utils/drqUtils"),
     urlUtils: require("./utils/urlUtils"),
+    jsonSchemaUtils: require("./utils/jsonSchemaUtils"),
 
     validator: require("./validator/validator")
 };
