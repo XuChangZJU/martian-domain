@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2016/12/5.
  */
-
+const assert = require('assert');
 const jsf = require('json-schema-faker');
 const tv4 = require('tv4');
 const keys = require('lodash/keys');
