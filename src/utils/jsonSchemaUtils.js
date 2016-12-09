@@ -15,7 +15,7 @@ function modifySchema(schema) {
     }
 
     if (schema.type === 'object') {
-        if (schema.hasOwnProperty('required')) {
+        if (!schema.hasOwnProperty('required')) {
             schema.required = [];
         }
         keys(schema.properties).forEach(
