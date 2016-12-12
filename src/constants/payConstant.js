@@ -3,12 +3,15 @@
  */
 "use strict";
 const state = {
+    init: 0,
     paying: 1,
     paid: 10,
     refundFailed: 31,
     failed: 51,
-    refunding: 71,
-    refunded: 101,
+    refundingToFailed: 71,
+    refundingToClosed2: 72,
+    refundedToFailed: 101,
+    refundedToClosed2: 102,
 };
 
 const stateDecoder = {
@@ -16,8 +19,10 @@ const stateDecoder = {
     [state.paid]: "支付完成",
     [state.failed]: "支付失败",
     [state.refundFailed]: "退款失败",
-    [state.refunding]: "退款中",
-    [state.refunded]: "退款成功",
+    [state.refundingToFailed]: "退款中",
+    [state.refundingToClosed2]: "退款中",
+    [state.refundedToFailed]: "退款成功",
+    [state.refundedToClosed2]: "退款成功",
 }
 
 function decodeState(s) {

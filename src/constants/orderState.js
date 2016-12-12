@@ -15,4 +15,5 @@ module.exports = {
     closed1: 101,       // 支付成功且关闭
     closed2: 105,       // 退款成功且关闭
     closed3: 109,       // 支付失败且关闭
+    refundFailed: 999,  // 退款失败
 };
