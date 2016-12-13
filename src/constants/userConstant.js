@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2016/9/9.
  */
-module.exports = {
+const systemUsers = {
 	root: {
 		id: 1,
 		mobile: "13000000000",
@@ -22,4 +22,25 @@ module.exports = {
 		mobile: "13000001002",
 		nickname: "码天租房后台进程"
 	}
+};
+
+const userState = {
+	normal: 1,
+	disabled: 99,
+	shadow: 199
+};
+
+function userStateDecoder(state) {
+	const USER_STATE_STRING = {
+		[userState.normal]: '正常的',
+		[userState.disabled]: '禁用的',
+		[userState.shadow]: '未激活的',
+	};
+	return USER_STATE_STRING[state];
+};
+
+module.exports = {
+	systemUsers,
+	userState,
+	userStateDecoder,
 };
