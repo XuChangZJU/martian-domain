@@ -6,6 +6,7 @@
 const leaseState = require("./leaseState");
 const decoder = {
 	[leaseState.willAborted]: "将中止",
+	[leaseState.shadow]: "未激活",
 	[leaseState.aborted]: "已中止",
 	[leaseState.ignored]: "房东已拒绝",
 	[leaseState.outDated]: "已过期",

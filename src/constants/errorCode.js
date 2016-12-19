@@ -76,7 +76,7 @@ module.exports = {
 	errorKeyInfoUndefined: {code: 580, message: "钥匙不能为空"},
 	errorTempKeyLockWordIsDisposableKeyWord: {code: 579, message: "临时钥匙原语类型只能是一次性原语类型"},
 	errorKeyNotUsed: {code: 578, message: "钥匙不能被使用"},
-	errorKeyNameNotUndefined: {code: 577, message: "钥匙名称不能为空"},
+	// errorKeyNameNotUndefined: {code: 577, message: "钥匙名称不能为空"},
 	errorKeyAlreadyShare: {code: 576, message: "钥匙已经分享给他了"},
 
 	errorUserHasActiveKeysOnLock: {code: 560, message: "该用户在该锁上已经有其它的可用钥匙"},
