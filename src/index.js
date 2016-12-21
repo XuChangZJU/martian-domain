@@ -9,6 +9,8 @@ module.exports= {
     houseState: require("./constants/houseState"),
     leaseState: require("./constants/leaseState"),
     leasePayType: require("./constants/leasePayType"),
+    leasePayState: require("./constants/leasePayState"),
+    leasePayStateDecoder: require("./constants/leasePayStateDecoder"),
     orderState: require("./constants/orderState"),
     orderStateDecoder: require("./constants/orderStateDecoder"),
     imagePickerOptions: require('./constants/imagePickerOptions'),
