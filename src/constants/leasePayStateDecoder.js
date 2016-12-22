@@ -8,6 +8,7 @@ const decoder = {
     [leasePayState.unpaid]: "未支付",
     [leasePayState.paid]: "已支付",
     [leasePayState.refunded]: "已退款",
+    [leasePayState.closed]: "已关闭",
 };
 
 function decode(state) {
