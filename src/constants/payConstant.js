@@ -6,27 +6,21 @@ const state = {
     init: 0,
     paying: 1,
     paid: 10,
-    refundFailed: 31,
-    failed: 51,
-    refundingToFailed: 71,
-    refundingToClosed2: 72,
-    refundedToFailed: 101,
-    refundedToClosed2: 102,
+    refunding: 70,
+    partialRefunded: 91,
+    refunded: 101,
 };
 
-const stateDecoder = {
+const STRINGS_OF_STATES = {
     [state.paying]: "正在支付",
     [state.paid]: "支付完成",
-    [state.failed]: "支付失败",
-    [state.refundFailed]: "退款失败",
-    [state.refundingToFailed]: "退款中",
-    [state.refundingToClosed2]: "退款中",
-    [state.refundedToFailed]: "退款成功",
-    [state.refundedToClosed2]: "退款成功",
-}
+    [state.refunding]: "正在退款",
+    [state.partialRefunded]: "部分退款",
+    [state.refunded]: "已退款",
+};
 
-function decodeState(s) {
-    return stateDecoder[s];
+function stateDecoder(s) {
+    return STRINGS_OF_STATES[s];
 }
 
 const origin = {
@@ -34,18 +28,38 @@ const origin = {
     account: "account",
 };
 
-const originDecoder = {
+/**
+ * 允许退款的窗口长度，一个pay成功后如果超过这个窗口，则不允许被退款（相应的order成为archieve状态）
+ * @type {{}}
+ */
+const RefundAllowedWindow = {
+    [origin.alipay]: 3600 * 1000,       // todo 这个值没有测试过，如果在1小时内就不能退款的话，这里会失败导致整个系统完蛋！！！
+    [origin.account]: 24 * 3600 * 1000,
+};
+
+/**
+ * 不同origin在退款时的优先级。优先级越高的越优先被退款
+ * @type {{}}
+ */
+const RefundWeightOfOrigins = {
+    [origin.alipay]: 100,
+    [origin.account]: 999,
+};
+
+const STRINGS_OF_ORIGINS = {
     [origin.alipay]: "支付宝",
     [origin.account]: "余额",
-}
+};
 
-function decodeOrigin(s) {
-    return originDecoder[s];
+function originDecoder(o) {
+    return STRINGS_OF_ORIGINS[o];
 }
 
 module.exports = {
     state,
-    decodeState,
+    stateDecoder,
     origin,
-    decodeOrigin
+    originDecoder,
+    RefundWeightOfOrigins,
+    RefundAllowedWindow,
 };
