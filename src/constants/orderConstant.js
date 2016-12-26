@@ -11,7 +11,7 @@ const state = {
     refunding: 20,
     refunded: 30,
     closed: 101,
-    archived: 999,
+    finished: 999,
 };
 
 const STRING_OF_STATES = {
@@ -23,7 +23,7 @@ const STRING_OF_STATES = {
     [state.refunding]: '退款中',
     [state.refunded]: '退款成功',
     [state.closed]: '已失效',          // 从未支付状态到的关闭状态
-    [state.archived]: '已成功',        // 从支付成功状态到的关闭状态
+    [state.finished]: '已成功',        // 从支付成功状态到的关闭状态
 };
 
 const decodeState = (s) => {
