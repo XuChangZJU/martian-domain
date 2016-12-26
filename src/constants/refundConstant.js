@@ -16,11 +16,11 @@ const STRING_OF_STATES = {
     [state.failed]: "退款失败",
 };
 
-const stateDecoder = (s) => {
+const decodeState = (s) => {
     return STRING_OF_STATES[s]
 };
 
 module.exports = {
     state,
-    stateDecoder,
+    decodeState,
 };

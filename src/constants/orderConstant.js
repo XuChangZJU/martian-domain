@@ -26,7 +26,7 @@ const STRING_OF_STATES = {
     [state.archived]: '已成功',        // 从支付成功状态到的关闭状态
 };
 
-const stateDecoder = (s) => {
+const decodeState = (s) => {
     return STRING_OF_STATES[s];
 };
 
@@ -48,13 +48,13 @@ const STRING_OF_TYPES = {
     [type.coupon]: "平台奖金"
 };
 
-const typeDecoder = (t) => {
+const decodeType = (t) => {
     return STRING_OF_TYPES[t];
 }
 
 module.exports = {
     state,
     type,
-    stateDecoder,
-    typeDecoder,
+    decodeState,
+    decodeType,
 };

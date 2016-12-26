@@ -21,7 +21,7 @@ const STRINGS_OF_STATES = {
     [state.failed]: "已失败",
 };
 
-function stateDecoder(s) {
+function decodeState(s) {
     return STRINGS_OF_STATES[s];
 }
 
@@ -53,15 +53,15 @@ const STRINGS_OF_ORIGINS = {
     [origin.account]: "余额",
 };
 
-function originDecoder(o) {
+function decodeOrigin(o) {
     return STRINGS_OF_ORIGINS[o];
 }
 
 module.exports = {
     state,
-    stateDecoder,
+    decodeState,
     origin,
-    originDecoder,
+    decodeOrigin,
     RefundWeightOfOrigins,
     RefundAllowedWindow,
 };
