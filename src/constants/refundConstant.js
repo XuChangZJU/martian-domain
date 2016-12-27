@@ -5,12 +5,13 @@
 
 const state = {
     init: 0,
-    refunding: 1,
-    refunded: 10,
-    failed: 9999,
+    refunding: 99,
+    refunded: 201,
+    failed: 999,
 };
 
 const STRING_OF_STATES = {
+    [state.init]: "初始化",
     [state.refunding]: "退款中",
     [state.refunded]: "退款完成",
     [state.failed]: "退款失败",

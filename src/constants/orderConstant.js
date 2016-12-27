@@ -7,10 +7,10 @@ const state = {
     paying: 3,
     partialPaid: 5,
     paid: 10,
-    toBeRefunded: 15,
-    refunding: 20,
-    refunded: 30,
-    closed: 101,
+    toBeRefunded: 91,
+    refunding: 99,
+    refunded: 201,
+    closed: 501,
     finished: 999,
 };
 

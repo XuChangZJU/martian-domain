@@ -4,11 +4,11 @@
 "use strict";
 const state = {
     init: 0,
-    paying: 1,
+    paying: 3,
     paid: 10,
-    refunding: 70,
-    partialRefunded: 91,
-    refunded: 101,
+    refunding: 99,
+    partialRefunded: 101,
+    refunded: 201,
     failed: 999,
 };
 
