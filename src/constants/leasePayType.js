@@ -9,5 +9,6 @@ module.exports = {
 	refund: 30,			// 退款
 	compensate: 40,		// 违约金
 	tax: 50,				// 平台抽税
-	history: 199,			// 平台以外的历史支付
+	historicalRental: 198,			// 平台以外的历史支付
+	historicalDeposit: 199,			// 平台以外的历史押金
 };
