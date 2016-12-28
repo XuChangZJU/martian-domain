@@ -22,8 +22,8 @@ const STRING_OF_STATES = {
     [state.toBeRefunded]: '退款中',    // 这个状态是开始退款的状态，为了实现合并退款
     [state.refunding]: '退款中',
     [state.refunded]: '退款成功',
-    [state.closed]: '已失效',          // 从未支付状态到的关闭状态
-    [state.finished]: '已成功',        // 从支付成功状态到的关闭状态
+    [state.closed]: '已关闭',
+    [state.finished]: '已结束',
 };
 
 const decodeState = (s) => {

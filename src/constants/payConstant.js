@@ -19,8 +19,8 @@ const STRINGS_OF_STATES = {
     [state.refunding]: "正在退款",
     [state.partialRefunded]: "部分退款",
     [state.refunded]: "已退款",
-    [state.closed]: "已失败",
-    [state.finished]: "已关闭",
+    [state.closed]: "已关闭",
+    [state.finished]: "已结束",
 };
 
 function decodeState(s) {
