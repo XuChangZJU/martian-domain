@@ -9,7 +9,8 @@ const state = {
     refunding: 99,
     partialRefunded: 101,
     refunded: 201,
-    failed: 999,
+    closed: 501,
+    finished: 999,
 };
 
 const STRINGS_OF_STATES = {
@@ -18,7 +19,8 @@ const STRINGS_OF_STATES = {
     [state.refunding]: "正在退款",
     [state.partialRefunded]: "部分退款",
     [state.refunded]: "已退款",
-    [state.failed]: "已失败",
+    [state.closed]: "已失败",
+    [state.finished]: "已关闭",
 };
 
 function decodeState(s) {
