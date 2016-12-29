@@ -5,5 +5,6 @@ module.exports = {
     unpaid: 0,
     paid: 1,
     refunded: 2,
-    closed: -10,
+    closed: 501,
+    finished: 999,
 };
