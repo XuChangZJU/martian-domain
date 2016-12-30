@@ -26,8 +26,8 @@ const systemUsers = {
 
 const userState = {
 	normal: 1,
-	disabled: 99,
-	shadow: 199
+	shadow: 199,
+	disabled: 999,
 };
 
 function userStateDecoder(state) {
