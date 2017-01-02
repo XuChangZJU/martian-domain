@@ -9,6 +9,7 @@ module.exports = {
 	inVerifying: 20,           // 审核中
 	waitingForLock: 25,       // 审核通过但没有绑定智能锁
 	offline: 30,                // 下线
+	shadow: 32,				 // 房屋上有影子租约
 	willFree: 35,               // 有租约但即将到期,
 	free: 40,                   // 已上线无租约
 	ordered: 47,				 // 已预订（租客已付款，但前任租客还未退租）

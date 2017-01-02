@@ -14,6 +14,7 @@ const decoder = {
     [idStatus.illegal]: "实名认证未获通过",
     [idStatus.imageAcceptable]: "实名认证已通过",
     [idStatus.imageReceived]: "身份证图像已上传",
+    [idStatus.imageIllegal]: "身份证图像验证失败",
     [idStatus.legal]: "身份认证已经完成"
 };
 
