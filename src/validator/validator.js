@@ -1,7 +1,6 @@
 /**
  * Created by Administrator on 2016/6/23.
  */
-"use strict";
 
 'use strict';
 function isMobile(text) {
@@ -9,7 +8,7 @@ function isMobile(text) {
 }
 
 function isPassword(text) {
-    return ((text) && (typeof text === "string") && (text.length >= 8))
+    return ((text) && (typeof text === "string") && (/^[a-zA-Z0-9!.@]{8,16}$/.test(text)))
 
 }
 
@@ -41,3 +40,4 @@ module.exports = {
     isUrl,
     isNickname
 };
+
