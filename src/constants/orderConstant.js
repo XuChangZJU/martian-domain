@@ -23,7 +23,7 @@ const STRING_OF_STATES = {
     [state.refunding]: '退款中',
     [state.refunded]: '退款成功',
     [state.closed]: '已关闭',
-    [state.finished]: '已结束',
+    [state.finished]: '已完成',
 };
 
 const decodeState = (s) => {
