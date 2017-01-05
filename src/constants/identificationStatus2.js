@@ -12,9 +12,10 @@ module.exports = {
     uncertain2: 20,         //  身份证图像识别未确定
     uncertain3: 30,         // 两者皆未确定
 
-    illegal: 60,           // 姓名证件号码未通过
-    imageAcceptable: 70,     // 姓名证件号码验证已通过，等待图像上传
-    imageReceived: 80,      // 图像已上传
-    imageIllegal: 90,       // 图像验证失败
+    illegal: 60,           // 姓名证件号码未通过（图像未上传）
+    illegal2: 65,               // 姓名证件号码未通过（图像已上传）
+    imageAcceptable: 70,     // 姓名证件号码验证已通过（图像未上传）
+    imageReceived: 80,      // 姓名证件号码验证已通过(图像已上传)
+    imageIllegal: 90,       // 姓名证件号码验证已通过(图像验证失败)
     legal: 100              // 两者皆通过
 };
