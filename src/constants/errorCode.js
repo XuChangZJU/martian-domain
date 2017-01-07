@@ -20,7 +20,7 @@ module.exports = {
 	errorVersionTooLow: {code: 984, message: '应用的版本过低'},
 
 	// Order相关error
-	errorOrderAlreadyClosed: {code: 899, message: '该订单已经关闭'},
+	errorOrderCouldNotPay: {code: 899, message: '该订单不可支付'},
 
 	//User相关error信息
 	errorMobileUndefined: {code: 699, message: "手机号不能为空"},
