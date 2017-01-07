@@ -19,6 +19,9 @@ module.exports = {
 	errorInvalidAccessTokenOrRefreshToken: {code:985, message:'访问令牌或刷新令牌非法'},
 	errorVersionTooLow: {code: 984, message: '应用的版本过低'},
 
+	// Order相关error
+	errorOrderAlreadyClosed: {code: 899, message: '该订单已经关闭'},
+
 	//User相关error信息
 	errorMobileUndefined: {code: 699, message: "手机号不能为空"},
 	errorIllegalMobile: {code: 698, message: "非法的手机号"},
