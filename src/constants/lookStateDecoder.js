@@ -5,12 +5,12 @@
 
 const LookState = require("./lookState");
 const stateDecoder = {
-	[LookState.invalid1]: "已出租",
-	[LookState.invalid2]: "已出租",
-	[LookState.invalid3]: "已出租",
-	[LookState.invalid4]: "已出租",
-	[LookState.invalid5]: "已出租",
-	[LookState.invalid6]: "已出租",
+	[LookState.invalid1]: "已失效",
+	[LookState.invalid2]: "已失效",
+	[LookState.invalid3]: "已失效",
+	[LookState.invalid4]: "已失效",
+	[LookState.invalid5]: "已失效",
+	[LookState.invalid6]: "已失效",
 	[LookState.init]: "",
 	[LookState.cancel1]: "已取消",
     [LookState.cancel2]: "已取消",
