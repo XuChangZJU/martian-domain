@@ -44,7 +44,7 @@ const STRING_OF_TYPES = {
     [type.deposit]: "押金",
     [type.looking]: "看房金",
     [type.compensate]: "续约金",
-    [type.tax]: "平台扣款",
+    [type.tax]: "平台佣金",
     [type.coupon]: "平台奖金"
 };
 
