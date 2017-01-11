@@ -15,6 +15,7 @@ module.exports = {
 	willAborted: -2,			// 将要提前中止
 	willBeDenied: 3,		 	// 将被拒绝（房东已经选择了忽略此租客的请求）
 	shadow: 6,					// 影子租约
+	waitingForHouseOnline: 8,		// 影子租约租客已经确认，但房屋还未上线
 	applying: 10,               // 申请中
 	contracted: 15,			 // 达成意向
 	willCompleted: 19,		 // 即将到期
