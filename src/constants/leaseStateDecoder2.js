@@ -13,7 +13,7 @@ const decoder = {
 	[leaseState.outDated]: "已过期",
 	[leaseState.cancelled]: "已取消",
 	[leaseState.denied]: "房东已拒绝",
-	[leaseState.preempted]: "已出租",
+	[leaseState.preempted]: "被抢租",
 	[leaseState.completed]: "租约完成",
 	[leaseState.willBeDenied]: "申请中",
 	[leaseState.applying]: "申请中",

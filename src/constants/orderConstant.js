@@ -37,6 +37,7 @@ const type = {
     compensate: 4,   // 违约金
     tax: 5,         // 平台税金
     coupon: 6,      // 平台红包
+    lock: 7,        // 智能锁购买
 };
 
 const STRING_OF_TYPES = {
@@ -45,7 +46,8 @@ const STRING_OF_TYPES = {
     [type.looking]: "看房金",
     [type.compensate]: "续约金",
     [type.tax]: "平台佣金",
-    [type.coupon]: "平台奖金"
+    [type.coupon]: "平台奖金",
+    [type.lock]: "智能锁购买",
 };
 
 const decodeType = (t) => {
