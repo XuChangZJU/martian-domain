@@ -11,7 +11,7 @@ const decoder = {
 	[houseState.offline]: "已下线",
 	[houseState.willFree]: "将到期",
 	[houseState.free]: "可租赁",
-	[houseState.ordered]: "已租下",
+	[houseState.ordered]: "已预订",
 	[houseState.rented]: "有租约",
 	[houseState.willOffline]: "到期下线"
 };

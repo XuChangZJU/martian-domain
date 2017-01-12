@@ -12,7 +12,7 @@ module.exports = {
 	denied: -5,                 // 被房东拒绝
 	aborted: -4,      			// 提前中止
 	preempted: -3,              // 被别人抢占（抢租下了）
-	willAborted: -2,			// 将要提前中止
+	willAborted: 2,			// 将要提前中止
 	willBeDenied: 3,		 	// 将被拒绝（房东已经选择了忽略此租客的请求）
 	shadow: 6,					// 影子租约
 	waitingForHouseOnline: 8,		// 影子租约租客已经确认，但房屋还未上线
