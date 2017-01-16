@@ -14,6 +14,7 @@ const decoder = {
 	[leaseState.denied]: "被拒绝",
 	[leaseState.preempted]: "已被其他租客租下",
 	[leaseState.completed]: "已完成",
+	[leaseState.incomplete]: "未完成",
 	[leaseState.willBeDenied]: "将被拒绝",
 	[leaseState.applying]: "求租中",
 	[leaseState.contracted]: "已达成意向",

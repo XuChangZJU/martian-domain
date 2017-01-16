@@ -28,6 +28,7 @@ module.exports= {
     payConstant: require("./constants/payConstant"),
     withDrawConstant: require("./constants/withDrawConstant"),
     refundConstant: require("./constants/refundConstant"),
+    lockApplicationConstant: require("./constants/lockApplicationConstant"),
 
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
