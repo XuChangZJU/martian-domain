@@ -29,6 +29,7 @@ module.exports= {
     withDrawConstant: require("./constants/withDrawConstant"),
     refundConstant: require("./constants/refundConstant"),
     lockApplicationConstant: require("./constants/lockApplicationConstant"),
+    accountConstant: require("./constants/accountConstant"),
 
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
