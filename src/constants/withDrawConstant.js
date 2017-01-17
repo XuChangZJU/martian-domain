@@ -35,6 +35,7 @@ function decodeOrigin(s) {
 }
 
 module.exports = {
+    state,
     origin,
     decodeOrigin,
     decodeState,
