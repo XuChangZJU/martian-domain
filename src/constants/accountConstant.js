@@ -8,16 +8,18 @@ const origin = {
     pay: "pay",
     withdraw: "withdraw",
     withdrawFailure: "withdrawFailure",
-    refund: "refund"
+    orderRefund: "orderRefund",
+    payRefund: "payRefund",
 };
 
 
 const STRINGS_OF_ORIGINS = {
-    [origin.order]: "订单",
-    [origin.pay]: "支付",
+    [origin.order]: "订单收款",
+    [origin.pay]: "订单付款",
     [origin.withdraw]: "提现",
     [origin.withdrawFailure]: "提现失败",
-    [origin.refund]: "退款",
+    [origin.orderRefund]: "订单退款",
+    [origin.payRefund]: "支付退款",
 };
 
 
