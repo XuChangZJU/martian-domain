@@ -22,6 +22,12 @@ const STRINGS_OF_ORIGINS = {
     [origin.payRefund]: "支付退款",
 };
 
+const relation = {
+    order: 'order',
+    pay: 'pay',
+    refund: 'refund',
+    withdraw: 'withdraw',
+}
 
 function decodeOrigin(o) {
     return STRINGS_OF_ORIGINS[o];
@@ -30,4 +36,5 @@ function decodeOrigin(o) {
 module.exports = {
     origin,
     decodeOrigin,
+    relation,
 };
