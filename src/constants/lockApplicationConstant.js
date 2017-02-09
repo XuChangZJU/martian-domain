@@ -11,7 +11,8 @@ const state = {
     confirmed: 50,
     applyingForRefunding: 60,
     refunding: 70,
-    refunded: 501,
+    refunded: 201,
+    closed: 501,
     finished: 901
 };
 
@@ -25,6 +26,7 @@ const STRING_OF_STATES = {
     [state.applyingForRefunding]: "申请退款处理中",
     [state.refunding]: "退款中",
     [state.refunded]: "退款成功",
+    [state.closed]: "已关闭",
     [state.finished]: "已完成",
 };
 
