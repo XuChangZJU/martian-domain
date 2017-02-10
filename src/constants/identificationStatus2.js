@@ -14,6 +14,7 @@ module.exports = {
 
     illegal: 60,           // 姓名证件号码未通过（图像未上传）
     illegal2: 65,               // 姓名证件号码未通过（图像已上传）
+    illegal3: 67,               // 姓名证件号码未通过（已存在该证件号码）
     imageAcceptable: 70,     // 姓名证件号码验证已通过（图像未上传）
     imageReceived: 80,      // 姓名证件号码验证已通过(图像已上传)
     imageIllegal: 90,       // 姓名证件号码验证已通过(图像验证失败)

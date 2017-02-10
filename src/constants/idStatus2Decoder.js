@@ -13,6 +13,7 @@ const decoder = {
     [idStatus.uncertain3]: "证件号码与图像均未确定",
     [idStatus.illegal]: "实名认证未获通过",
     [idStatus.illegal2]: "实名认证未获通过（图像已上传）",
+    [idStatus.illegal3]: "该实名信息已被使用",
     [idStatus.imageAcceptable]: "实名认证已通过（图像未上传）",
     [idStatus.imageIllegal]: "身份证图像验证失败",
     [idStatus.legal]: "身份认证已经完成"
