@@ -44,9 +44,9 @@ const STRING_OF_TYPES = {
     [type.rent]: "租金",
     [type.deposit]: "押金",
     [type.looking]: "看房金",
-    [type.compensate]: "续约金",
-    [type.tax]: "平台佣金",
-    [type.coupon]: "平台奖金",
+    [type.compensate]: "违约金",
+    [type.tax]: "平台服务费",
+    [type.coupon]: "红包",
     [type.lock]: "智能锁购买",
 };
 
