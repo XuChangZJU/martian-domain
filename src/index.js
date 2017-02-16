@@ -41,6 +41,7 @@ module.exports= {
     drqUtils: require("./utils/drqUtils"),
     urlUtils: require("./utils/urlUtils"),
     jsonSchemaUtils: require("./utils/jsonSchemaUtils"),
+    promiseUtils: require("./utils/promiseUtils"),
 
     validator: require("./validator/validator")
 };
