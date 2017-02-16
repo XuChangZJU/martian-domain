@@ -25,7 +25,7 @@ Promise.every = (promises) => {
                 const failure = result.findIndex(
                     (ele) => ele === false
                 );
-                if (failure !== undefined) {
+                if (failure !== -1) {
                     throw res[failure];
                 }
                 return Promise.resolve(res);
