@@ -90,6 +90,7 @@ module.exports = {
 
 	// 500以下是house用的信息
 	errorHouseHasBeenOrderedByOthers: {code: 499, message: "该房屋已经被其他租客预订"},
+	errorHouseHasBeenRented: {code: 498, message: "该房屋已经被租下"},
 	
 	// 1000 以上是client端自己定义的Error
 	errorRunTime: {code: 2000, message: "运行时异常"},
