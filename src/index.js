@@ -30,6 +30,7 @@ module.exports= {
     refundConstant: require("./constants/refundConstant"),
     lockApplicationConstant: require("./constants/lockApplicationConstant"),
     accountConstant: require("./constants/accountConstant"),
+    unitDecoder: require("./constants/unitDecoder"),
 
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
