@@ -4,6 +4,7 @@
 "use strict";
 
 module.exports = {
+    invalid8: -80,          // 订单退款
     invalid7: -70,			// 房屋下线
     invalid6: -60,			// 钥匙过期
     invalid5: -50,			// 主动取消

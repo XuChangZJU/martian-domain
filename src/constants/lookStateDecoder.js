@@ -11,6 +11,8 @@ const stateDecoder = {
 	[LookState.invalid4]: "已失效",
 	[LookState.invalid5]: "已失效",
 	[LookState.invalid6]: "已失效",
+	[LookState.invalid7]: "已失效",
+	[LookState.invalid8]: "已失效",
 	[LookState.init]: "",
 	[LookState.cancel1]: "已取消",
     [LookState.cancel2]: "已取消",
