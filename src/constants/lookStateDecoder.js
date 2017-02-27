@@ -13,7 +13,7 @@ const stateDecoder = {
 	[LookState.invalid6]: "已失效",
 	[LookState.invalid7]: "已失效",
 	[LookState.invalid8]: "已失效",
-	[LookState.init]: "",
+	[LookState.init]: "初始",
 	[LookState.cancel1]: "已取消",
     [LookState.cancel2]: "已取消",
 	[LookState.avail1]: "看房路上",
