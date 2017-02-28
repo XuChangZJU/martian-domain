@@ -103,18 +103,18 @@ function modifyData(data, schema) {
  * @param data
  * @param schema
  */
-function validate(data, schema) {
+const validate = (data, schema) => {
     const valid = tv4.validateResult(data, schema);
     if (valid.error) {
         throw new Error(`经过tailor后的数据不满足jsonSchema约束，错误是${valid.error}`);
     }
-}
+};
 
 /**
  * 这个函数必须在JSF的基础上加一些定制，否则返回的数据太过随机
  * @param schema
  */
-function generateDataBySchema(schema, tailor) {
+const generateDataBySchema = (schema, tailor) => {
     const schema2 = merge({}, schema);
     if (schema2.hasOwnProperty('$schema')) {
         delete schema2.$schema;
@@ -137,8 +137,7 @@ function generateDataBySchema(schema, tailor) {
         validate(data, schema);
     }
     return data;
-}
-
+};
 
 module.exports = {
     generateDataBySchema,

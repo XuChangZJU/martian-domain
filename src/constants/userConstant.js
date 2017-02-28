@@ -30,7 +30,7 @@ const userState = {
 	disabled: 999,
 };
 
-function userStateDecoder(state) {
+const userStateDecoder = (state)  => {
 	const USER_STATE_STRING = {
 		[userState.normal]: '正常的',
 		[userState.disabled]: '禁用的',

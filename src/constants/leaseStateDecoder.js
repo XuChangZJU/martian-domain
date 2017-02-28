@@ -4,6 +4,7 @@
 "use strict";
 const leaseState = require("./leaseState");
 const decoder = {
+	[leaseState.offline]: "房屋已失效",
 	[leaseState.willAborted]: "即将中止",
 	[leaseState.shadow]: "未激活",
 	[leaseState.waitingForHouseOnline]: "等待房屋审核",
