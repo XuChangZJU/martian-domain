@@ -3,7 +3,7 @@
 
 module.exports = {
 	errorUndefined: {code: 999, message: "未定义的错误"},
-	errorInternal: {code: 998, message: "服务器内部错误"},
+	errorInternal: {code: 998, message: "服务器开小差了"},
 	errorUnexistedApi: {code: 997, message: "请求了不存在的接口"},
 	errorUncompletedApi: {code:996, message: "请求了尚未实现的接口"},
 	errorUserNotLoggedIn: {code: 995, message: "用户没有登录"},
@@ -98,7 +98,7 @@ module.exports = {
 	errorFailToAccessServer: {code: 1999, message: "无法连接到服务器"},
 	errorFailToAccessCosServer: {code: 1998, message: "无法连接到COS服务器"},
 	errorFromCosServer: {code: 1997, message: "COS服务器返回错误："},
-	errorNetUnavailable: {code: 1996, message: "无法连接到网络"},
+	errorNetUnavailable: {code: 1996, message: "网络好像不给力"},
 
 
 
