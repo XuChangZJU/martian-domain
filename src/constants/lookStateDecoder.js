@@ -21,6 +21,7 @@ const stateDecoder = {
 	[LookState.looking]: "看房中",
 	[LookState.end]: "已看过",
 	[LookState.end2]: "已看过",
+	[LookState.end3]: "已看过",
     [LookState.outDated]: "过期待确认"
 };
 
