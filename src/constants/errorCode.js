@@ -18,6 +18,7 @@ module.exports = {
 	errorIllegalFileUrl:{code:986,message:'非法的URL'},
 	errorInvalidAccessTokenOrRefreshToken: {code:985, message:'访问令牌或刷新令牌非法'},
 	errorVersionTooLow: {code: 984, message: '应用的版本过低'},
+	errorDataInconsistency: {code: 983, message: '数据已经过期'},
 
 	// Order相关error
 	errorOrderCouldNotPay: {code: 899, message: '该订单不可支付'},
@@ -101,9 +102,12 @@ module.exports = {
 
 
 
-	createErrorByCode: function (errorCode, msg) {
+	createErrorByCode: function (errorCode, msg, entity) {
 		var err = new Error(msg || errorCode.message);
 		err.code = errorCode.code;
+		if (entity) {
+			err.entity = entity;
+		}
 		return err;
 	},
 
