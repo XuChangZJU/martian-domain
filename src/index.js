@@ -33,6 +33,7 @@ module.exports= {
     lockApplicationConstant: require("./constants/lockApplicationConstant"),
     accountConstant: require("./constants/accountConstant"),
     unitDecoder: require("./constants/unitDecoder"),
+    chargeConstant: require("./constants/chargeConstant"),
 
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
