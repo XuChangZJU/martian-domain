@@ -7,4 +7,5 @@ module.exports = {
     getKeyWord: 4,
     confirmOutdate: 5,
     clearBonds: 6,
+    resetConstantKeyWord: 7,
 };

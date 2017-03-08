@@ -10,6 +10,7 @@ const decode = (type) => {
         [KeyActionType.dfu]: "锁升级",
         [KeyActionType.getKeyWord]: '获取锁原语',
         [KeyActionType.unlock]: '开门',
+        [KeyActionType.resetConstantKeyWord]: '重置持久性开锁原语',
     };
     return typeText[type];
 }
