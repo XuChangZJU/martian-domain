@@ -7,11 +7,13 @@
 const method = {
     byOrganization: 1,
     byLord: 2,
+    none: 999,
 };
 
 const methodDecoder = {
-    [method.byOrganization]: "向机构交费",
-    [method.byLord]: "房东收取"
+    [method.byOrganization]: "租客自主交纳",
+    [method.byLord]: "由房东收取",
+    [method.none]: "无",
 }
 
 function decodeMethod(m) {
