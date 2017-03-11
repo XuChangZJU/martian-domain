@@ -52,12 +52,25 @@ const states = {
     init: 0,
     sending: 1,
     success: 2,
-    failure: 3
+    failure: 3,
+    fatal: 127,
+};
+
+const decodeState = (s) => {
+    const STATE_TEXT = {
+        [states.init]: '未发送',
+        [states.sending]: '发送中',
+        [states.success]: '发送成功',
+        [states.failure]: '发送失败',
+        [states.fatal]: '放弃发送',
+    };
+    return STATE_TEXT[s];
 };
 
 module.exports = {
     icons,
     words,
     weights,
-    states
-}
+    states,
+    decodeState,
+};
