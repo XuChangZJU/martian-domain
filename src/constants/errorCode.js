@@ -8,7 +8,7 @@ module.exports = {
 	errorUncompletedApi: {code:996, message: "请求了尚未实现的接口"},
 	errorUserNotLoggedIn: {code: 995, message: "用户没有登录"},
 	errorInvalidAccessToken: {code: 994, message: "用户使用的访问令牌非法"},
-	errorExpiredAccessToken: {code: 993, message: "用户使用的访问令牌已经过期"},
+	errorExpiredAccessToken: {code: 993, message: "登录已失效，请重新登录"},
 	errorSuspiciousAccessToken: {code: 992, message: "可疑的访问令牌"},
 	errorNoAccessRight: {code: 991, message: "该用户没有访问此数据的权限"},
 	errorUnexistedApiMethod: {code: 990, message: "请求了不支持的http方法"},
