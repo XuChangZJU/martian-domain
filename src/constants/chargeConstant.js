@@ -7,7 +7,7 @@
 const method = {
     byOrganization: 1,
     byLord: 2,
-    none: 999,
+    none: 255,
 };
 
 const methodDecoder = {
