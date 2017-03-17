@@ -4,8 +4,8 @@
 "use strict";
 const weights = {
     tiny: 10,
-    low: 10,
-    medium: 20,
+    low: 20,
+    medium: 40,
     high: 60,
     top: 90
 };
