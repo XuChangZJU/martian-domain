@@ -4,8 +4,8 @@
 "use strict";
 const weights = {
     tiny: 10,
-    low: 20,
-    medium: 40,
+    low: 10,
+    medium: 20,
     high: 60,
     top: 90
 };
@@ -56,6 +56,70 @@ const states = {
     fatal: 127,
 };
 
+const type = {
+    coreServerStart: 0,
+    sharedKeyGot: 1,
+    sharedKeyLost: 2,
+    idVerified: 3,
+    sharedKeyEdited: 4,
+    keyExpired: 5,
+    keyActivated: 6,
+    keyExpiredWithoutUserConfirm: 7,
+    tempKeyUsedAndOvertime: 8,
+    keyExpiredTimeExtended: 9,
+    debitKeyExpired: 10,
+    suspiciousLogIn: 11,
+    accountEvent: 12,
+    remindConfirm: 13,
+    tempKeyProduced: 14,
+    debitKeyProduced: 15,
+    lockApplicationSending: 16,
+    withdrawn: 17,
+    lockLowBattery: 18,
+
+    rentServerStart: 1000,
+    leaseContracted: 1001,
+    leaseDenied: 1002,
+    leaseOutdated: 1003,
+    leasePreempted: 1004,
+    leasePreemptedForUnpaid: 1005,
+    tempKeyDisabled: 1006,
+    applyingHouseLeaseEnd: 1007,
+    orderCreatedToTenant: 1008,
+    orderCreatedToLord: 1009,
+    fireLineReachedToTenant: 1010,
+    fireLineReachedToLord: 1011,
+    deadlineReachedToTenant: 1012,
+    deadlineReachedAndHousePreempted: 1013,
+    deadlineReachedToLord: 1014,
+    rentalReturned: 1015,
+    lookRefundReturned: 1016,
+    depositAvailable: 1017,
+    leaseApplying: 1018,
+    leaseOrderedToTenantFirstTime: 1019,
+    leasePayOrderedToTenant: 1020,
+    leasePayCompletedToTenant: 1021,
+    leasePayCompletedToLord: 1022,
+    leasePayOrderedToLordFirstTime: 1023,
+    leasePayOrderedToLord: 1024,
+    houseDenied: 1025,
+    consultReplied: 1026,
+    houseBeingOnline: 1027,
+    houseBeingFree: 1028,
+    houseWaitingForLock: 1029,
+    houseShadow: 1030,
+    houseShadowFromFree: 1031,
+    remindShadowUser: 1032,
+    houseRented: 1033,
+    houseOrdered: 1034,
+    shadowLeaseActivated: 1035,
+    houseWillOffline: 1036,
+    houseOffline: 1037,
+    tempKeyUsed: 1038,
+    tempKeyUsedAndConfirm: 1039,
+    tempKeyUsedAndConfirmOverTime: 1040,
+};
+
 const decodeState = (s) => {
     const STATE_TEXT = {
         [states.init]: '未发送',
@@ -73,4 +137,5 @@ module.exports = {
     weights,
     states,
     decodeState,
+    type
 };
