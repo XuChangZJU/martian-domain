@@ -118,6 +118,7 @@ const type = {
     tempKeyUsed: 1038,
     tempKeyUsedAndConfirm: 1039,
     tempKeyUsedAndConfirmOverTime: 1040,
+    lookExpired: 1041,
 };
 
 const decodeState = (s) => {
