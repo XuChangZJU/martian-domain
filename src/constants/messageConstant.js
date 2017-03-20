@@ -110,7 +110,6 @@ const type = {
     houseShadowFromFree: 1031,
     remindShadowUser: 1032,
     houseRented: 1033,
-    houseOrdered: 1034,
     shadowLeaseActivated: 1035,
     houseWillOffline: 1036,
     houseOffline: 1037,
