@@ -118,6 +118,7 @@ const type = {
     lookExpired: 1041,
     consultRepliedToLord: 1043,
     consultCreated: 1044,
+    incompleteLeaseCancelled: 1045,
 };
 
 const decodeState = (s) => {
