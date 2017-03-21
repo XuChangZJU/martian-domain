@@ -102,20 +102,24 @@ const type = {
     leasePayCompletedToLord: 1022,
     leasePayOrderedToLordFirstTime: 1023,
     leasePayOrderedToLord: 1024,
-    consultReplied: 1026,
-    houseVerified: 1027,
+    consultRepliedToTenant: 1026,
+    houseBeingOnline: 1027,
     houseBeingFree: 1028,
     houseWaitingForLock: 1029,
     houseShadow: 1030,
     houseShadowFromFree: 1031,
     remindShadowUser: 1032,
+    houseRented: 1033,
+    houseOrdered: 1034,
     shadowLeaseActivated: 1035,
     houseWillOffline: 1036,
     houseOffline: 1037,
     tempKeyUsed: 1038,
     tempKeyUsedAndConfirm: 1039,
     tempKeyUsedAndConfirmOverTime: 1040,
-    lookExpired: 1041
+    lookExpired: 1041,
+    consultRepliedToLord: 1043,
+    consultCreated: 1044,
 };
 
 const decodeState = (s) => {
