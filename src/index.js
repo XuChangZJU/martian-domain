@@ -34,6 +34,7 @@ module.exports= {
     accountConstant: require("./constants/accountConstant"),
     unitDecoder: require("./constants/unitDecoder"),
     chargeConstant: require("./constants/chargeConstant"),
+    staleConstant: require("./constants/staleConstant"),
 
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
@@ -41,10 +42,10 @@ module.exports= {
     maskUtils : require("./utils/maskUtils"),
     netUtils: require("./utils/netUtils"),
     versionUtils: require("./utils/versionUtils"),
-    pinYinUtils: require("./utils/pinYinUtils2"),
+    // pinYinUtils: require("./utils/pinYinUtils2"),
     drqUtils: require("./utils/drqUtils"),
     urlUtils: require("./utils/urlUtils"),
-    jsonSchemaUtils: require("./utils/jsonSchemaUtils"),
+    // jsonSchemaUtils: require("./utils/jsonSchemaUtils"),
     promiseUtils: require("./utils/promiseUtils"),
 
     validator: require("./validator/validator")
