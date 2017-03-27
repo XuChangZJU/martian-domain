@@ -12,15 +12,17 @@ module.exports = {
 	errorSuspiciousAccessToken: {code: 992, message: "可疑的访问令牌"},
 	errorNoAccessRight: {code: 991, message: "该用户没有访问此数据的权限"},
 	errorUnexistedApiMethod: {code: 990, message: "请求了不支持的http方法"},
-	errorDataFormat:{code:989,message:'非法的数据类型'},
-	errorIllegalParam:{code:988,message:'非法的数据参数'},
-	errorIllegalBodyInfo:{code:987,message:'http请求信息不完整'},
+
 	errorIllegalFileUrl:{code:986,message:'非法的URL'},
 	errorInvalidAccessTokenOrRefreshToken: {code:985, message:'访问令牌或刷新令牌非法'},
 	errorVersionTooLow: {code: 984, message: '应用的版本过低'},
 	errorDataInconsistency: {code: 983, message: '数据已经过期'},
 
-	// Order相关error
+	errorLegalDataConflict: {code: 799, message: '合法的数据冲突'},
+	errorLegalParamError: {code: 798, message: '合法的参数错误'},
+	errorLegalBodyError: {code: 797, message: '合法的请求错误'},
+
+	/*// Order相关error
 	errorOrderCouldNotPay: {code: 899, message: '该订单不可支付'},
 
 	//User相关error信息
@@ -91,7 +93,7 @@ module.exports = {
 
 	// 500以下是house用的信息
 	errorHouseHasBeenOrderedByOthers: {code: 499, message: "该房屋已经被其他租客预订"},
-	errorHouseHasBeenRented: {code: 498, message: "该房屋已经被租下"},
+	errorHouseHasBeenRented: {code: 498, message: "该房屋已经被租下"},*/
 	
 	// 1000 以上是client端自己定义的Error
 	errorRunTime: {code: 2000, message: "运行时异常"},
