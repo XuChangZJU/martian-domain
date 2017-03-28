@@ -43,13 +43,13 @@ module.exports = {
 	errorVerificationTimeOut:{code:684,message:'验证超时，请重新验证'},
 	errorSameMobile:{code:683,message:'该手机号与当前使用的手机号相同'},
 	errorUserHasBeenDisabled:{code: 682, message: "用户已经被禁用，原因是"},
-	errorIdCardNumberUnMatched:{code: 681, message: "身份证号输入错误，请重新输入"},
+	errorIdCardNumberUnMatched:{code: 681, message: "身份证号输入错误，请重新输入"},*/
 	errorUserHasNotIdentified: {code: 680, message: "用户尚未进行身份验证"},
     errorUserIdentificationUncompleted: {code: 679, message: "用户的身份验证尚未完成"},
 	errorIdInfoExisted: {code: 678, message: "该身份信息已经存在"},
 	errorIdInfoNotMatched: {code: 677, message: "身份信息验证不匹配"},
 	errorTradePasswordUnset: {code: 676, message: "用户的交易密码尚未设置"},
-	errorAgentUnexisted: {code: 675, message: "该介绍人不存在"},
+	/* errorAgentUnexisted: {code: 675, message: "该介绍人不存在"},
 
 
 
