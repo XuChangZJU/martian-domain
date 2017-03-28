@@ -119,6 +119,7 @@ const type = {
     consultRepliedToLord: 1043,
     consultCreated: 1044,
     incompleteLeaseCancelled: 1045,
+    pushFreshHouseToTenant: 1046,
 };
 
 const decodeState = (s) => {
