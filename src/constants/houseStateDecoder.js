@@ -6,6 +6,7 @@ const houseState = require("./houseState");
 const decoder = {
 	[houseState.incomplete]: "未完成",
 	[houseState.denied]: "被拒绝",
+    [houseState.dirty]: "修改过的",
 	[houseState.waitingForLock]: "可租赁",
 	[houseState.inVerifying]: "审核中",
 	[houseState.offline]: "已下线",
