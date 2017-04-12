@@ -3,8 +3,9 @@
  */
 
 module.exports = {
-	ANYONE: "ANYONE",
-	ROOT: "ROOT",
-	LOGGEDIN: "LOGGEDIN",
-	CLIENT: "CLIENT"
+    ANYONE: "ANYONE",
+    ROOT: "ROOT",
+    LOGGEDIN: "LOGGEDIN",
+    CLIENT: "CLIENT",
+    ACTIVITYUSER: "ACTIVITYUSER",
 };
