@@ -5,6 +5,7 @@
 
 const state = {
     init: 1,
+    activating: 8,
     active: 10,
     exchanged: 21,
     send: 101,
@@ -14,10 +15,11 @@ const state = {
 
 const stateDecoder = (s) => {
     const STRINGS_OF_TYPE = {
-        [state.init]: '初始的',
-        [state.expired]: '过期的',
-        [state.exchanged]: '已兑换的',
-        [state.exchanged]: '已赠送',
+        [state.init]: '初始',
+        [state.activating]: '激活中',
+        [state.expired]: '已过期',
+        [state.exchanged]: '已领取',
+        [state.send]: '已赠送',
         [state.active]: '可用的',
     };
     return STRINGS_OF_TYPE[s];
