@@ -18,9 +18,9 @@ const stateDecoder = (s) => {
         [state.init]: '初始',
         [state.activating]: '激活中',
         [state.expired]: '已过期',
-        [state.exchanged]: '已领取',
+        [state.exchanged]: '未激活',
         [state.send]: '已赠送',
-        [state.active]: '可用的',
+        [state.active]: '生效中',
     };
     return STRINGS_OF_TYPE[s];
 }
