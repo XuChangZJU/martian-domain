@@ -10,6 +10,7 @@ const decoder = {
     [leasePayState.refunded]: "已退款",
     [leasePayState.closed]: "已关闭",
     [leasePayState.finished]: "已结束",
+    [leasePayState.reduced]: "已减免",
 };
 
 function decode(state) {

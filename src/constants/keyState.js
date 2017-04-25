@@ -5,6 +5,8 @@ module.exports = {
 	stateTempKeyExpiredWithoutUse: -2,			// 临时钥匙未使用就过期
 	stateTempKeyExpiredWithUserConfirm: -3,		// 临时钥匙过期后用户主动确认
 	stateTempKeyExpiredWithoutUserConfirm: -4,	// 临时钥匙过期后用户未主动确认（通过其它途径确认）
+	stateSlaveKeyExpiredByMaster: -101,				// 分享钥匙被主钥匙删除
+	stateSlaveKeyExpiredBySelf: -102,				// 分享钥匙被自己删除
 	stateVisible: 0,							// 边界值，小于这个值的钥匙不应该被用户看到
 	stateDisabled: 2,							// 主钥匙被禁用
 	stateTempKeyFailToSubmitLog: 4,			//  （客户端ONLY）临时钥匙提交使用日志失败

@@ -4,6 +4,7 @@
 module.exports = {
     unpaid: 1,
     paid: 10,
+    reduced: 21,
     refunded: 201,
     closed: 501,
     finished: 999,

@@ -6,6 +6,7 @@
 module.exports = {
 	incomplete: 0,              // 未完成
 	denied: 10,                 // 未通过
+    dirty: 15,                  // 下线且修改过基本信息
 	inVerifying: 20,           // 审核中
 	free: 22,                   // 已上线无租约
 	waitingForLock: 25,       // 审核通过但没有绑定智能锁

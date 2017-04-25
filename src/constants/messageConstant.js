@@ -76,6 +76,7 @@ const type = {
     lockApplicationSending: 16,
     withdrawn: 17,
     lockLowBattery: 18,
+    amuletSending: 19,
 
     rentServerStart: 1000,
     leaseContracted: 1001,
