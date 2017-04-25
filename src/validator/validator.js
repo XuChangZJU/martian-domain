@@ -8,8 +8,7 @@ function isMobile(text) {
 }
 
 function isPassword(text) {
-    return ((text) && (typeof text === "string") && (/^[a-zA-Z0-9!.@]{8,16}$/.test(text)))
-
+    return ((text) && (typeof text === "string") && (/^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z0-9!.@]{8,16}$/.test(text)))
 }
 
 function isCaptcha(text) {
@@ -31,6 +30,8 @@ function isUrl(str) {
 function isNickname(str) {
     return str && typeof str === "string" && str.trim().length > 0 && str.length < 16;
 }
+
+
 
 module.exports = {
     isMobile,
