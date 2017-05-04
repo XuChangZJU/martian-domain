@@ -13,7 +13,11 @@ const state = {
     refunding: 70,
     refunded: 201,
     closed: 501,
-    finished: 901
+    finished: 901,
+    changing: 911,
+    returning: 921,
+    returned: 931,
+    end: 999,
 };
 
 const STRING_OF_STATES = {
@@ -28,6 +32,10 @@ const STRING_OF_STATES = {
     [state.refunded]: "退款成功",
     [state.closed]: "已关闭",
     [state.finished]: "已完成",
+    [state.changing]: "更换中",
+    [state.returning]: "归还中",
+    [state.returned]: "已归还",
+    [state.end]: "已结束",
 };
 
 const decodeState = (s) => {
