@@ -78,6 +78,8 @@ const type = {
     lockLowBattery: 18,
     amuletSending: 19,
     lockApplicationPaid: 20,
+    lockApplicationReturned: 21,
+    lockApplicationGetRodeFmChanging: 22,
 
     rentServerStart: 1000,
     leaseContracted: 1001,
