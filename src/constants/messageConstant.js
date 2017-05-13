@@ -81,6 +81,8 @@ const type = {
     lockApplicationReturned: 21,
     lockApplicationGetRodeFmChanging: 22,
     lockApplicationRefunded: 23,
+    lockApplicationCancelChange: 24,
+    lockApplicationCancelReturn: 25,
 
     rentServerStart: 1000,
     leaseContracted: 1001,
