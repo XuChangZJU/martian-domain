@@ -127,7 +127,8 @@ const type = {
     consultCreated: 1044,
     incompleteLeaseCancelled: 1045,
     pushFreshHouseToTenant: 1046,
-    houseUnboundLock: 1047
+    houseUnboundLock: 1047,
+    lockGettingSend: 1048
 };
 
 const decodeState = (s) => {
