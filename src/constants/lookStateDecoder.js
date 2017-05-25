@@ -22,7 +22,7 @@ const stateDecoder = {
 	[LookState.end]: "已看过",
 	[LookState.end2]: "已看过",
 	[LookState.end3]: "已看过",
-    [LookState.outDated]: "过期待确认"
+    [LookState.outDated]: "过期未确认"
 };
 
 function decode(state) {

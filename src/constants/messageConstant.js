@@ -128,7 +128,9 @@ const type = {
     incompleteLeaseCancelled: 1045,
     pushFreshHouseToTenant: 1046,
     houseUnboundLock: 1047,
-    lockGettingSend: 1048
+    lockGettingSend: 1048,
+    lookingStart: 1049,
+    lookPaid: 1050,
 };
 
 const decodeState = (s) => {
