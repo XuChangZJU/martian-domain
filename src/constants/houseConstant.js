@@ -3,6 +3,7 @@
  */
 const category = {
     house: 1,
+    flatShare: 2,
     apartment: 3,
     hotel: 5,
     spec: 99,
@@ -12,6 +13,7 @@ const category = {
 const decodeCategory = (c) => {
     const CATEGORY_MATRIX = {
         [category.house]: '房屋',
+        [category.flatShare]: '合租',
         [category.apartment]: '公寓',
         [category.hotel]: '酒店',
         [category.spec]: '规格',
