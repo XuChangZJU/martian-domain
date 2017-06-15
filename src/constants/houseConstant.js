@@ -19,7 +19,7 @@ const decodeCategory = (c) => {
         [category.apartment]: '公寓',
         [category.hotel]: '酒店',
         [category.spec]: '规格',
-        [category.room]: '房间',
+        [category.room]: '单间',
     };
 
     return CATEGORY_MATRIX[c];
