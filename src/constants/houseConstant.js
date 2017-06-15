@@ -13,9 +13,9 @@ const category = {
 
 const decodeCategory = (c) => {
     const CATEGORY_MATRIX = {
-        [category.house]: '整租房屋',
-        [category.flatShare]: '合租房屋',
-        [category.tavern]: '民宿客栈',
+        [category.house]: '整租',
+        [category.flatShare]: '合租',
+        [category.tavern]: '民宿',
         [category.apartment]: '公寓',
         [category.hotel]: '酒店',
         [category.spec]: '规格',
