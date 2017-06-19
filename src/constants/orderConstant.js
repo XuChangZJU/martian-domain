@@ -15,7 +15,7 @@ const state = {
 };
 
 const STRING_OF_STATES = {
-    [state.unpaid]: '未支付',
+    [state.unpaid]: '待支付',
     [state.paying]: '支付中',
     [state.partialPaid]: '部分支付',
     [state.paid]: '支付成功',
