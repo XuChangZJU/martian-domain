@@ -4,7 +4,7 @@
 "use strict";
 const houseState = require("./houseState");
 const decoder = {
-	[houseState.incomplete]: "未完成",
+	[houseState.incomplete]: "未审核",
 	[houseState.denied]: "被拒绝",
     [houseState.dirty]: "已下线",
 	[houseState.inVerifying]: "审核中",
