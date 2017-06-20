@@ -12,7 +12,7 @@ const decoder = {
 	[houseState.willFree]: "将到期",
 	[houseState.shadow]: "租约未激活",
 	[houseState.free]: "可租赁",
-	[houseState.online]: "线上",
+	[houseState.online]: "通过",
 	[houseState.ordered]: "已预订",
 	[houseState.rented]: "出租中",
 	[houseState.willOffline]: "到期下线"
