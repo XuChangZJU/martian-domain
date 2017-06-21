@@ -25,6 +25,12 @@ const decodeCategory = (c) => {
     return CATEGORY_MATRIX[c];
 };
 
+const parentValidityState = {
+    unavailable: -1,            // 有父房屋且父房屋的状态不是online
+    nolock: 1,                  // 没有父房屋或有父亲且父亲状态是online但父亲上无锁
+    hasLock: 2,                 // 有父房屋且父亲状态是online且父亲上有锁
+};
+
 const state = require('./houseState');
 const decodeHouse = require('./houseStateDecoder').decode;
 const decodeHouse2 = require('./houseStateDecoder2').decode;
@@ -35,4 +41,5 @@ module.exports = {
     decodeCategory,
     decodeHouse,
     decodeHouse2,
+    parentValidityState,
 };
