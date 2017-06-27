@@ -9,6 +9,7 @@ module.exports = {
     dirty: 15,                  // 下线且修改过基本信息
 	inVerifying: 20,           // 审核中
 	free: 22,                   // 已上线无租约
+	online: 23,					 // 线上
 	offline: 30,                // 下线
 	shadow: 32,				 // 房屋上有影子租约
 	willFree: 35,               // 有租约但即将到期,
