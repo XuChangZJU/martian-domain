@@ -38,6 +38,7 @@ const type = {
     tax: 5,         // 平台税金
     coupon: 6,      // 平台红包
     lock: 7,        // 智能锁购买
+    endFee: 8,      //  租约结束后的最后结算
 };
 
 const STRING_OF_TYPES = {
