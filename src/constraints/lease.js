@@ -48,14 +48,14 @@ const ableToOffLease = (data)=> {
 };
 
 const ableToReLease = (data)=> {
-    const { lease, house, userId } = data || {};
+    const { lease, house, userId, nextLease } = data || {};
     const { willEndsAt, beginsAt, deadPoint, unit, tenantId } = lease || {};
     const { id } = house || {};
 
     const leaseState = (lease || {}).state;
     const houseState = (house || {}).state;
     const options = LeaseUnits.units[unit];
-    if (options) {
+    if (!nextLease && options) {
         const availableLine = DateUtils.dateAdd(options.precision, -options.volumesForBeToOff, willEndsAt);
         const availableLineTime = availableLine && new Date(availableLine).getTime();
         if (beginsAt <= Date.now() && leaseState === LeaseState.willCompleted && houseState === HouseState.willFree &&
