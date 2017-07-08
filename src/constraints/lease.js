@@ -55,7 +55,7 @@ const ableToReLease = (data)=> {
     const leaseState = (lease || {}).state;
     const houseState = (house || {}).state;
     const options = LeaseUnits.units[unit];
-    if (!nextLease && options) {
+    if (!nextLease && options && !originalData) {
         const availableLine = DateUtils.dateAdd(options.precision, -options.volumesForBeToOff, willEndsAt);
         const availableLineTime = availableLine && new Date(availableLine).getTime();
         if (beginsAt <= Date.now() && leaseState === LeaseState.willCompleted && houseState === HouseState.willFree &&
