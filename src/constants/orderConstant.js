@@ -49,6 +49,7 @@ const STRING_OF_TYPES = {
     [type.tax]: "平台服务费",
     [type.coupon]: "红包",
     [type.lock]: "智能锁购买",
+    [type.endFee]: "费用结算",
 };
 
 const decodeType = (t) => {
