@@ -22,6 +22,16 @@ const treatment = {
 
 const decode = require('./leaseStateDecoder');
 
+const decodeTreatment = (s) => {
+    const DATA = {
+        [treatment.personal]: '房东自助',
+        [treatment.platform]: '平台助收',
+        [treatment.general]: '正常流程',
+    };
+
+    return DATA[s];
+};
+
 const LeaseUnits = {
     units: {
         "n": {
@@ -177,5 +187,6 @@ module.exports = {
     decode,
     treatment,
     leaseApplyState,
-    LeaseUnits
+    LeaseUnits,
+    decodeTreatment,
 };
