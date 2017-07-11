@@ -23,13 +23,13 @@ var ableToEndLease = function ableToEndLease(data) {
         deadPoint = _ref2.deadPoint,
         unit = _ref2.unit,
         lordId = _ref2.lordId,
-        treatment = _ref2.treatment;
+        treatment = _ref2.treatment,
+        leaseState = _ref2.state;
 
     var _ref3 = house || {},
-        id = _ref3.id;
+        id = _ref3.id,
+        houseState = _ref3.state;
 
-    var leaseState = (lease || {}).state;
-    var houseState = (house || {}).state;
     var options = LeaseUnits.units[unit];
     if (treatment === Treatment.general && options) {
         var availableLine = DateUtils.dateAdd(options.precision, -options.volumesForBeToOff, willEndsAt);
@@ -53,13 +53,13 @@ var ableToOffLease = function ableToOffLease(data) {
         deadPoint = _ref5.deadPoint,
         unit = _ref5.unit,
         lordId = _ref5.lordId,
-        tenantId = _ref5.tenantId;
+        tenantId = _ref5.tenantId,
+        leaseState = _ref5.state;
 
     var _ref6 = house || {},
-        id = _ref6.id;
+        id = _ref6.id,
+        houseState = _ref6.state;
 
-    var leaseState = (lease || {}).state;
-    var houseState = (house || {}).state;
     var options = LeaseUnits.units[unit];
     if (options) {
         var unAvailableLine = DateUtils.dateAdd(options.precision, -options.volumesForBeToOff, willEndsAt);
@@ -83,14 +83,14 @@ var ableToReLease = function ableToReLease(data) {
         beginsAt = _ref8.beginsAt,
         deadPoint = _ref8.deadPoint,
         unit = _ref8.unit,
-        tenantId = _ref8.tenantId;
+        tenantId = _ref8.tenantId,
+        originalData = _ref8.originalData,
+        leaseState = _ref8.state;
 
     var _ref9 = house || {},
-        id = _ref9.id;
+        id = _ref9.id,
+        houseState = _ref9.state;
 
-    var leaseState = (lease || {}).state;
-    var houseState = (house || {}).state;
-    var originalData = (lease || {}).originalData;
     var options = LeaseUnits.units[unit];
     if (!nextLease && options && !originalData) {
         var availableLine = DateUtils.dateAdd(options.precision, -options.volumesForBeToOff, willEndsAt);
