@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Created by Administrator on 2016/9/9.
  */
@@ -7,5 +9,5 @@ module.exports = {
     ROOT: "ROOT",
     LOGGEDIN: "LOGGEDIN",
     CLIENT: "CLIENT",
-    ACTIVITYUSER: "ACTIVITYUSER",
+    EXTERNALUSER: "EXTERNALUSER"
 };

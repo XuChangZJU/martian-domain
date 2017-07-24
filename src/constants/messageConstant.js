@@ -2,7 +2,8 @@
  * Created by Administrator on 2016/8/31.
  */
 "use strict";
-const weights = {
+
+var weights = {
     tiny: 10,
     low: 10,
     medium: 20,
@@ -10,7 +11,12 @@ const weights = {
     top: 90
 };
 
-const icons = {
+const origin = {
+    jPush: "jPush",
+    weChat: "weChat",
+};
+
+var icons = {
     warning: {
         group: "core",
         name: "wrong"
@@ -32,7 +38,7 @@ const icons = {
         name: "wrong"
     }
 };
-const words = {
+var words = {
     share: "享",
     identify: "验",
     pass: "过",
@@ -46,17 +52,17 @@ const words = {
     violate: "违",
     push: "催",
     online: "上",
-    return :"退"
+    "return": "退"
 };
-const states = {
+var states = {
     init: 0,
     sending: 1,
     success: 2,
     failure: 3,
-    fatal: 127,
+    fatal: 127
 };
 
-const type = {
+var type = {
     coreServerStart: 0,
     sharedKeyGot: 1,
     sharedKeyLost: 2,
@@ -130,25 +136,22 @@ const type = {
     houseUnboundLock: 1047,
     lockGettingSend: 1048,
     lookingStart: 1049,
-    lookPaid: 1050,
+    lookPaid: 1050
 };
 
-const decodeState = (s) => {
-    const STATE_TEXT = {
-        [states.init]: '未发送',
-        [states.sending]: '发送中',
-        [states.success]: '发送成功',
-        [states.failure]: '发送失败',
-        [states.fatal]: '放弃发送',
-    };
+var decodeState = function decodeState(s) {
+    var _STATE_TEXT;
+
+    var STATE_TEXT = (_STATE_TEXT = {}, _STATE_TEXT[states.init] = '未发送', _STATE_TEXT[states.sending] = '发送中', _STATE_TEXT[states.success] = '发送成功', _STATE_TEXT[states.failure] = '发送失败', _STATE_TEXT[states.fatal] = '放弃发送', _STATE_TEXT);
     return STATE_TEXT[s];
 };
 
 module.exports = {
-    icons,
-    words,
-    weights,
-    states,
-    decodeState,
-    type
+    icons: icons,
+    words: words,
+    weights: weights,
+    states: states,
+    decodeState: decodeState,
+    type: type,
+    origin: origin,
 };
