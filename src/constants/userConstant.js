@@ -39,8 +39,29 @@ const userStateDecoder = (state)  => {
 	return USER_STATE_STRING[state];
 };
 
+const mobileRetrievalState = {
+    agency: 1,
+    unAgency: 2,
+    uncertain: 3,
+    unknown: 4,
+    expired: 9
+};
+
+const mobileRetrievalStateDecoder = (state)  => {
+    const MOBILERETRIEVAL_STATE_STRING = {
+        [mobileRetrievalState.agency]: '房产中介',
+        [mobileRetrievalState.unAgency]: '非房产中介',
+        [mobileRetrievalState.uncertain]: '暂不确定',
+        [mobileRetrievalState.unknown]: '尚未检测',
+        [mobileRetrievalState.expired]: '已过期',
+    };
+    return MOBILERETRIEVAL_STATE_STRING[state];
+};
+
 module.exports = {
 	systemUsers,
 	userState,
+    mobileRetrievalState,
 	userStateDecoder,
+    mobileRetrievalStateDecoder
 };
