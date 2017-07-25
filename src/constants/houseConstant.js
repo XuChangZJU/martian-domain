@@ -26,6 +26,7 @@ const decodeCategory = (c) => {
 };
 
 const parentValidityState = {
+    categoryToEntire: -2,       // 合租改整租，合租时的子房间的该置为的量值
     unavailable: -1,            // 有父房屋且父房屋的状态不是online
     nolock: 1,                  // 没有父房屋或有父亲且父亲状态是online但父亲上无锁
     hasLock: 2,                 // 有父房屋且父亲状态是online且父亲上有锁
