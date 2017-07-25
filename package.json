@@ -4,15 +4,16 @@
   "description": "basic library of martian",
   "main": "lib/index.js",
   "files": [
-  	"src/*",
+    "src/*",
     "lib/*"
   ],
   "scripts": {
     "test": "mocha --recursive",
-    "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib"
+    "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "prepush": "npm run build"
   },
   "dependencies": {
-    "sha1":"^1.1.1",
+    "sha1": "^1.1.1",
     "key-mirror": "^1.0.1"
   },
   "devDependencies": {
@@ -43,8 +44,9 @@
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
     "babel-register": "^6.3.13",
     "cross-env": "^3.1.4",
-    "mockjs": "1.0.1-beta2",
-    "expect.js": "latest"
+    "expect.js": "latest",
+    "husky": "^0.14.3",
+    "mockjs": "1.0.1-beta2"
   },
   "author": "XuChang",
   "license": "ISC"
