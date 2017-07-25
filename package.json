@@ -1,6 +1,6 @@
 {
   "name": "martian-domain",
-  "version": "1.9.0",
+  "version": "2.0.0",
   "description": "basic library of martian",
   "main": "lib/index.js",
   "files": [
@@ -10,7 +10,8 @@
   "scripts": {
     "test": "mocha --recursive",
     "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
-    "prepush": "npm run build"
+    "precommit": "npm run build",
+    "postcommit":"git add lib* && git commit -m auto-build"
   },
   "dependencies": {
     "sha1": "^1.1.1",
