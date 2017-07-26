@@ -38,7 +38,7 @@ function genGetListUrl(api, indexFrom, count, sort, query, extras) {
                 url += first ? '?' : '&';
                 first = false;
                 // const _query = JSON.stringify(query);
-                url += `${item}=${typeof extras[item] !== "string" ? JSON.stringify(extras[item]) : extras[item]}`;
+                url += `${item}=${encodeURIComponent(typeof extras[item] !== "string" ? JSON.stringify(extras[item]) : extras[item])}`;
             }
         });
         // }
