@@ -38,7 +38,7 @@ function genGetListUrl(api, indexFrom, count, sort, query, extras) {
                 url += first ? '?' : '&';
                 first = false;
                 // const _query = JSON.stringify(query);
-                url += `${item}=${typeof extras[item] !== "string" ? JSON.stringify(extras[item]) : extras[item]}`;
+                url += `${item}=${encodeURIComponent(typeof extras[item] !== "string" ? JSON.stringify(extras[item]) : extras[item])}`;
             }
         });
         // }
@@ -46,9 +46,24 @@ function genGetListUrl(api, indexFrom, count, sort, query, extras) {
     return url;
 }
 
-function genItemUrl(api, id) {
+function genItemUrl(api, id, extras) {
     assert(api.endsWith(':id'));
-    return api.replace(':id', id);
+    let url = api.replace(':id', id);
+
+    let first = true;
+    if (extras && typeof extras === 'object') {
+        // for (const item in extras) {
+        Object.keys(extras).forEach((item) => {
+            if (extras[item]) {
+                url += first ? '?' : '&';
+                first = false;
+                // const _query = JSON.stringify(query);
+                url += `${item}=${encodeURIComponent(typeof extras[item] !== "string" ? JSON.stringify(extras[item]) : extras[item])}`;
+            }
+        });
+        // }
+    }
+    return url;
 }
 
 function genInitArea(method, body) {
