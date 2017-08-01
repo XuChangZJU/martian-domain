@@ -36,6 +36,30 @@ const state = require('./houseState');
 const decodeHouse = require('./houseStateDecoder').decode;
 const decodeHouse2 = require('./houseStateDecoder2').decode;
 
+const externalHouseCheckResult = {
+    noYetValidated: 0,                 // 尚未验真
+    fake: 1,                           // 假房源
+    uncooperative: 2,                  // 不愿合作
+    searchRoommate: 3,                 // 非房东，寻找合租室友
+    willingToPayServiceCharge: 4,      // 暂时不愿装锁，愿意付3%服务费
+    willingToInstallLock: 5,           // 一房东愿意装锁
+    headLesseeWillingToInstallLock: 6, // 二房东愿意装锁
+
+};
+
+const externalHouseCheckResultDecoder = (checkResult) => {
+    const EXTERNALHOUSE_CHECKRESULT_STRING = {
+        [externalHouseCheckResult.noYetValidated]: '尚未验真',
+        [externalHouseCheckResult.fake]: '假房源',
+        [externalHouseCheckResult.uncooperative]: '不愿合作',
+        [externalHouseCheckResult.searchRoommate]: '非房东，寻找合租室友',
+        [externalHouseCheckResult.willingToPayServiceCharge]: '暂时不愿装锁，愿意付3%服务费',
+        [externalHouseCheckResult.willingToInstallLock]: '一房东愿意装锁',
+        [externalHouseCheckResult.headLesseeWillingToInstallLock]: '二房东愿意装锁',
+    };
+    return EXTERNALHOUSE_CHECKRESULT_STRING[checkResult];
+};
+
 module.exports = {
     state,
     category,
@@ -43,4 +67,6 @@ module.exports = {
     decodeHouse,
     decodeHouse2,
     parentValidityState,
+    externalHouseCheckResult,
+    externalHouseCheckResultDecoder
 };
