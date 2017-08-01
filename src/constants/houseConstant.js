@@ -21,10 +21,8 @@ const decodeCategory = (c) => {
 		[category.spec]: '规格',
 		[category.room]: '单间',
 	};
-
 	return CATEGORY_MATRIX[c];
-}
-;
+};
 
 const parentValidityState = {
 	categoryToEntire: -2,       // 合租改整租，合租时的子房间的该置为的量值
@@ -36,6 +34,14 @@ const parentValidityState = {
 const rentStatus = {
 	rent: 5,
 	unRent: 10,
+};
+
+const decodeRentStatus = (r) => {
+	const RENTSTATUS_MATRIX = {
+		[rentStatus.rent]: '已出租',
+		[rentStatus.unRent]: '未出租',
+	};
+	return RENTSTATUS_MATRIX[r];
 };
 
 const state = require('./houseState');
@@ -50,4 +56,5 @@ module.exports = {
 	decodeHouse2,
 	parentValidityState,
 	rentStatus,
+	decodeRentStatus,
 };
