@@ -38,8 +38,8 @@ const rentStatus = {
 
 const decodeRentStatus = (r) => {
 	const RENTSTATUS_MATRIX = {
-		[rentStatus.rent]: '已出租',
-		[rentStatus.unRent]: '未出租',
+		[rentStatus.rent]: '是',
+		[rentStatus.unRent]: '否',
 	};
 	return RENTSTATUS_MATRIX[r];
 };
