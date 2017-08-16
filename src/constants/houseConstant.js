@@ -61,6 +61,7 @@ const externalHouseCheckResult = {
 
 const externalHouseCheckResultDecoder = (checkResult) => {
     const EXTERNALHOUSE_CHECKRESULT_STRING = {
+        [externalHouseCheckResult.rented]: '已出租',
         [externalHouseCheckResult.noYetValidated]: '尚未验真',
         [externalHouseCheckResult.fake]: '假房源',
         [externalHouseCheckResult.uncooperative]: '不愿合作',
