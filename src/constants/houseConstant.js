@@ -49,6 +49,7 @@ const decodeHouse = require('./houseStateDecoder').decode;
 const decodeHouse2 = require('./houseStateDecoder2').decode;
 
 const externalHouseCheckResult = {
+    rented: -1,                        // 已出租
     noYetValidated: 0,                 // 尚未验真
     fake: 1,                           // 假房源
     uncooperative: 2,                  // 不愿合作
