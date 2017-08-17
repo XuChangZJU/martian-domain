@@ -74,6 +74,21 @@ const externalHouseCheckResultDecoder = (checkResult) => {
     return EXTERNALHOUSE_CHECKRESULT_STRING[checkResult];
 };
 
+const impeachType = {
+	agentHold: 10,
+	rented: 20,
+	notReal: 30
+};
+
+const impeachTypeDecoder = (type) => {
+	const IMPEACHTYPE_STRING = {
+		[impeachType.agentHold]: '房产中介',
+		[impeachType.rented]: '已出租',
+		[impeachType.notReal]: '虚假房源'
+	};
+	return IMPEACHTYPE_STRING[type];
+};
+
 module.exports = {
     state,
     category,
@@ -85,4 +100,6 @@ module.exports = {
     decodeRentStatus,
     externalHouseCheckResult,
     externalHouseCheckResultDecoder,
+	impeachType,
+	impeachTypeDecoder
 };
