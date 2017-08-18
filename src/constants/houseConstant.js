@@ -89,6 +89,21 @@ const impeachTypeDecoder = (type) => {
 	return IMPEACHTYPE_STRING[type];
 };
 
+var verifyResult = {
+    init: 1,
+    agree: 10,
+    disagree: 20
+};
+
+var verifyResultDecoder = (result) =>{
+    const VERIFYRESULTSTRING = {
+        [verifyResult.init]: '未认证',
+        [verifyResult.agree]: '认同',
+        [verifyResult.disagree]: '不认同'
+    };
+    return VERIFYRESULTSTRING[result];
+};
+
 module.exports = {
     state,
     category,
@@ -101,5 +116,7 @@ module.exports = {
     externalHouseCheckResult,
     externalHouseCheckResultDecoder,
 	impeachType,
-	impeachTypeDecoder
+	impeachTypeDecoder,
+    verifyResult,
+    verifyResultDecoder
 };
