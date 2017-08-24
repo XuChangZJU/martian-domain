@@ -74,6 +74,19 @@ const externalHouseCheckResultDecoder = (checkResult) => {
     return EXTERNALHOUSE_CHECKRESULT_STRING[checkResult];
 };
 
+const feedback = {
+    praise: 5,
+    complaint: 10,
+};
+
+const decodeFeedback = (f) => {
+    const FEEDBACK_MATRIX = {
+        [feedback.praise]: '点赞',
+        [feedback.complaint]: '吐槽',
+    };
+    return FEEDBACK_MATRIX[f];
+};
+
 module.exports = {
     state,
     category,
@@ -85,4 +98,6 @@ module.exports = {
     decodeRentStatus,
     externalHouseCheckResult,
     externalHouseCheckResultDecoder,
+    feedback,
+    decodeFeedback
 };
