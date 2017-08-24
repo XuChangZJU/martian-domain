@@ -49,9 +49,9 @@ const decodeHouse = require('./houseStateDecoder').decode;
 const decodeHouse2 = require('./houseStateDecoder2').decode;
 
 const externalHouseCheckResult = {
-    rented: -1,                        // 已出租
+    // rented: -1,                        // 已出租
     noYetValidated: 0,                 // 尚未验真
-    fake: 1,                           // 假房源
+    // fake: 1,                           // 假房源
     uncooperative: 2,                  // 不愿合作
     searchRoommate: 3,                 // 非房东，寻找合租室友
     willingToPayServiceCharge: 4,      // 暂时不愿装锁，愿意付3%服务费
@@ -62,9 +62,9 @@ const externalHouseCheckResult = {
 
 const externalHouseCheckResultDecoder = (checkResult) => {
     const EXTERNALHOUSE_CHECKRESULT_STRING = {
-        [externalHouseCheckResult.rented]: '已出租',
+        // [externalHouseCheckResult.rented]: '已出租',
         [externalHouseCheckResult.noYetValidated]: '尚未验真',
-        [externalHouseCheckResult.fake]: '假房源',
+        // [externalHouseCheckResult.fake]: '假房源',
         [externalHouseCheckResult.uncooperative]: '不愿合作',
         [externalHouseCheckResult.searchRoommate]: '非房东，寻找合租室友',
         [externalHouseCheckResult.willingToPayServiceCharge]: '暂时不愿装锁，愿意付3%服务费',
@@ -87,6 +87,36 @@ const decodeFeedback = (f) => {
     return FEEDBACK_MATRIX[f];
 };
 
+const impeachType = {
+    agentHold: 10,
+    rented: 20,
+    notReal: 30
+};
+
+const impeachTypeDecoder = (type) => {
+    const IMPEACHTYPE_STRING = {
+        [impeachType.agentHold]: '房产中介',
+        [impeachType.rented]: '已出租',
+        [impeachType.notReal]: '虚假房源'
+    };
+    return IMPEACHTYPE_STRING[type];
+};
+
+const verifyResult = {
+    init: 1,
+    agree: 10,
+    disagree: 20
+};
+
+const verifyResultDecoder = (result) =>{
+    const VERIFYRESULTSTRING = {
+        [verifyResult.init]: '未认证',
+        [verifyResult.agree]: '认同',
+        [verifyResult.disagree]: '不认同'
+    };
+    return VERIFYRESULTSTRING[result];
+};
+
 module.exports = {
     state,
     category,
@@ -99,5 +129,9 @@ module.exports = {
     externalHouseCheckResult,
     externalHouseCheckResultDecoder,
     feedback,
-    decodeFeedback
+    decodeFeedback,
+    impeachType,
+    impeachTypeDecoder,
+    verifyResult,
+    verifyResultDecoder
 };
