@@ -28,6 +28,7 @@ const userState = {
 	normal: 1,
 	shadow: 199,
 	disabled: 999,
+	dangerous: 998
 };
 
 const userStateDecoder = (state)  => {
@@ -35,6 +36,7 @@ const userStateDecoder = (state)  => {
 		[userState.normal]: '正常的',
 		[userState.disabled]: '禁用的',
 		[userState.shadow]: '未激活的',
+		[userState.dangerous]: '危险用户',
 	};
 	return USER_STATE_STRING[state];
 };
