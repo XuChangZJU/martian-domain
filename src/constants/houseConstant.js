@@ -52,11 +52,13 @@ const externalHouseCheckResult = {
     // rented: -1,                        // 已出租
     noYetValidated: 0,                 // 尚未验真
     // fake: 1,                           // 假房源
-    uncooperative: 2,                  // 不愿合作
+    uncooperative: 2,                  // 一房东不愿合作
     searchRoommate: 3,                 // 非房东，寻找合租室友
-    willingToPayServiceCharge: 4,      // 暂时不愿装锁，愿意付3%服务费
+    willingToPayServiceCharge: 4,      // 暂时不愿装锁，愿意付服务费
     willingToInstallLock: 5,           // 一房东愿意装锁
     headLesseeWillingToInstallLock: 6, // 二房东愿意装锁
+    headLesseeUncooperative: 7,        // 二房东不愿合作
+    sublease: 8,                       // 非房东，转租房屋
 
 };
 
@@ -65,13 +67,28 @@ const externalHouseCheckResultDecoder = (checkResult) => {
         // [externalHouseCheckResult.rented]: '已出租',
         [externalHouseCheckResult.noYetValidated]: '尚未验真',
         // [externalHouseCheckResult.fake]: '假房源',
-        [externalHouseCheckResult.uncooperative]: '不愿合作',
+        [externalHouseCheckResult.uncooperative]: '一房东不愿合作',
         [externalHouseCheckResult.searchRoommate]: '非房东，寻找合租室友',
-        [externalHouseCheckResult.willingToPayServiceCharge]: '暂时不愿装锁，愿意付3%服务费',
+        [externalHouseCheckResult.willingToPayServiceCharge]: '暂时不愿装锁，愿意付服务费',
         [externalHouseCheckResult.willingToInstallLock]: '一房东愿意装锁',
         [externalHouseCheckResult.headLesseeWillingToInstallLock]: '二房东愿意装锁',
+        [externalHouseCheckResult.headLesseeUncooperative]: '二房东不愿合作',
+        [externalHouseCheckResult.sublease]: '非房东，转租房屋',
     };
     return EXTERNALHOUSE_CHECKRESULT_STRING[checkResult];
+};
+
+const feedback = {
+    praise: 5,
+    complaint: 10,
+};
+
+const decodeFeedback = (f) => {
+    const FEEDBACK_MATRIX = {
+        [feedback.praise]: '点赞',
+        [feedback.complaint]: '吐槽',
+    };
+    return FEEDBACK_MATRIX[f];
 };
 
 const impeachType = {
@@ -89,13 +106,13 @@ const impeachTypeDecoder = (type) => {
     return IMPEACHTYPE_STRING[type];
 };
 
-var verifyResult = {
+const verifyResult = {
     init: 1,
     agree: 10,
     disagree: 20
 };
 
-var verifyResultDecoder = (result) =>{
+const verifyResultDecoder = (result) =>{
     const VERIFYRESULTSTRING = {
         [verifyResult.init]: '未认证',
         [verifyResult.agree]: '认同',
@@ -115,6 +132,8 @@ module.exports = {
     decodeRentStatus,
     externalHouseCheckResult,
     externalHouseCheckResultDecoder,
+    feedback,
+    decodeFeedback,
     impeachType,
     impeachTypeDecoder,
     verifyResult,
