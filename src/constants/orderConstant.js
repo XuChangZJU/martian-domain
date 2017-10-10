@@ -11,7 +11,8 @@ const state = {
     refunding: 99,
     refunded: 201,
     closed: 501,
-    finished: 999,
+    outDated: 888,
+    finished: 999
 };
 
 const STRING_OF_STATES = {
@@ -23,7 +24,9 @@ const STRING_OF_STATES = {
     [state.refunding]: '退款中',
     [state.refunded]: '退款成功',
     [state.closed]: '已关闭',
+    [state.outDated]: '已过期',        //  红包order特有
     [state.finished]: '已完成',
+
 };
 
 const decodeState = (s) => {
@@ -39,6 +42,7 @@ const type = {
     coupon: 6,      // 平台红包
     lock: 7,        // 智能锁购买
     endFee: 8,      //  租约结束后的最后结算
+    backCoupon: 9, //   红包过期退还
 };
 
 const STRING_OF_TYPES = {
@@ -50,6 +54,7 @@ const STRING_OF_TYPES = {
     [type.coupon]: "红包",
     [type.lock]: "智能锁购买",
     [type.endFee]: "费用结算",
+    [type.backCoupon]: "过期的红包退还",
 };
 
 const decodeType = (t) => {
