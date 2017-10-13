@@ -7,8 +7,8 @@
 const method = {
     byOrganization: 1,
     byLord: 2,
-    none: 255,
-    martianLa: 300
+    martianLa: 3,
+    none: 255
 };
 
 const methodDecoder = {
