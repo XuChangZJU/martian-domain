@@ -101,7 +101,7 @@ module.exports = {
 	errorFailToAccessServer: {code: 1999, message: "无法连接到服务器"},
 	errorFailToAccessCosServer: {code: 1998, message: "无法连接到COS服务器"},
 	errorFromCosServer: {code: 1997, message: "COS服务器返回错误："},
-	errorNetUnavailable: {code: 1996, message: "网络好像不给力"},
+	errorNetUnavailable: {code: 1996, message: "网络不可用，或者系统设置禁止了本应用的网络权限，请检查后重试"},
 
 
 
