@@ -44,7 +44,7 @@ const type = {
     endFee: 8,      //  租约结束后的最后结算
     backCoupon: 9, //   红包过期退还
     electricityFees: 10, //  电费
-    electricityRecharge: 10, //  电费充值
+    electricityRecharge: 11, //  电费充值
 };
 
 const STRING_OF_TYPES = {
