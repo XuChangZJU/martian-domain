@@ -43,7 +43,8 @@ const type = {
     lock: 7,        // 智能锁购买
     endFee: 8,      //  租约结束后的最后结算
     backCoupon: 9, //   红包过期退还
-    electricityFees: 10 //  电费
+    electricityFees: 10, //  电费
+    electricityRecharge: 10, //  电费充值
 };
 
 const STRING_OF_TYPES = {
@@ -57,6 +58,7 @@ const STRING_OF_TYPES = {
     [type.endFee]: "费用结算",
     [type.backCoupon]: "过期的红包退还",
     [type.electricityFees]: "电费",
+    [type.electricityRecharge]: "电费充值",
 };
 
 const decodeType = (t) => {
