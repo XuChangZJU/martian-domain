@@ -22,6 +22,8 @@ module.exports = {
 	errorLegalParamError: {code: 798, message: '合法的参数错误'},
 	errorLegalBodyError: {code: 797, message: '合法的请求错误'},
 
+	chargeExistsError: {code: 800, message: '已存在的缴纳形式'},
+
 	/*// Order相关error
 	errorOrderCouldNotPay: {code: 899, message: '该订单不可支付'},
 
