@@ -119,7 +119,6 @@ function align(scale, date, left, closed) {
 		millis = date;
 		date = new Date(millis)
 	}
-	date2 = new Date(0);
 
 	const scale2 = scale.toLowerCase();
 	if(scale2 === "y") {
@@ -142,46 +141,70 @@ function align(scale, date, left, closed) {
 		}
 		else {
 			date2.setMonth(date.getMonth());
-			if(scale2 === "d") {
-				if(left) {
-					date2.setDate(date.getDate());
+			if (scale2 === 'w') {
+				const dayOfWeek = date.getDay();
+				const dayOfMonth = date.getDate();
+
+				/**
+				 * 按中国习惯，这里找周一去对齐
+				 */
+				if (left) {
+					let diff = 1 - dayOfWeek;
+					if (diff > 0) {
+						diff = diff - 7;
+					}
+					date2.setDate(dayOfMonth + diff);
 				}
 				else {
-					date2.setDate(date.getDate() + 1);
+					let diff = 8 - dayOfWeek;
+					if (diff > 7) {
+						diff = diff - 7;
+					}
+					date2.setDate(dayOfMonth + diff);
 				}
 			}
 			else {
-				date2.setDate(date.getDate());
-				if(scale2 === "h") {
+				if(scale2 === "d") {
 					if(left) {
-						date2.setHours(date.getHours());
+						date2.setDate(date.getDate());
 					}
 					else {
-						date2.setHours(date.getHours() + 1);
+						date2.setDate(date.getDate() + 1);
 					}
 				}
 				else {
-					date2.setHours(date.getHours());
-					if(scale2 === "n") {
-						if(left){
-							date2.setMinutes(date.getMinutes());
+					date2.setDate(date.getDate());
+					if(scale2 === "h") {
+						if(left) {
+							date2.setHours(date.getHours());
 						}
 						else {
-							date2.setMinutes(date.getMinutes() + 1);
+							date2.setHours(date.getHours() + 1);
 						}
 					}
 					else {
-						date2.setMinutes(date.getMinutes());
-						if(scale2 === "s") {
+						date2.setHours(date.getHours());
+						if(scale2 === "n") {
 							if(left){
-								date2.setSeconds(date.getSeconds());
+								date2.setMinutes(date.getMinutes());
 							}
 							else {
-								date2.setSeconds(date.getSeconds() + 1);
+								date2.setMinutes(date.getMinutes() + 1);
 							}
 						}
 						else {
-							throw new Error("当前不支持在" + scale2 + "级别上进行对齐");
+							date2.setMinutes(date.getMinutes());
+							if(scale2 === "s") {
+								if(left){
+									date2.setSeconds(date.getSeconds());
+								}
+								else {
+									date2.setSeconds(date.getSeconds() + 1);
+								}
+							}
+							else {
+								throw new Error("当前不支持在" + scale2 + "级别上进行对齐");
+							}
 						}
 					}
 				}
