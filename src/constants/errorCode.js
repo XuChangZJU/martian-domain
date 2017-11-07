@@ -17,6 +17,7 @@ module.exports = {
 	errorInvalidAccessTokenOrRefreshToken: {code:985, message:'访问令牌或刷新令牌非法'},
 	errorVersionTooLow: {code: 984, message: '应用的版本过低'},
 	errorDataInconsistency: {code: 983, message: '数据已经过期'},
+	errorDataObsoleted:{code: 982, message: '数据已经被删除'},
 
 	errorLegalDataConflict: {code: 799, message: '合法的数据冲突'},
 	errorLegalParamError: {code: 798, message: '合法的参数错误'},
