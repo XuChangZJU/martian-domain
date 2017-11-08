@@ -16,7 +16,8 @@ const showHouseListByTenant = (data) => {
 };
 
 const ableToDeleteHouse = (data) => {
-    const { state } = data || {};
+    const { house } = data || {};
+    const { state } = house || {};
     return [
         HouseState.incomplete,
         HouseState.denied,
