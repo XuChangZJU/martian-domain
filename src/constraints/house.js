@@ -15,6 +15,19 @@ const showHouseListByTenant = (data) => {
     ].includes(state);
 };
 
+const ableToDeleteHouse = (data) => {
+    const { state } = data || {};
+    return [
+        HouseState.incomplete,
+        HouseState.denied,
+        HouseState.dirty,
+        HouseState.inVerifying,
+        HouseState.offline,
+        HouseState.online,
+    ].includes(state);
+};
+
 module.exports = {
     showHouseListByTenant,
+    ableToDeleteHouse
 };
