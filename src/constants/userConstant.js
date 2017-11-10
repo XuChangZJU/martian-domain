@@ -15,12 +15,12 @@ const systemUsers = {
 	martianRent: {
 		id: 1001,
 		mobile: "13000001001",
-		nickname: "码天租房"
+		nickname: "帮租侠"
 	},
 	martianRentBackend: {
 		id: 1002,
 		mobile: "13000001002",
-		nickname: "码天租房后台进程"
+		nickname: "帮租侠后台进程"
 	}
 };
 
