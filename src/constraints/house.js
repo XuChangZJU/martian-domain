@@ -4,8 +4,8 @@
 const HouseState = require('../constants/houseConstant').state;
 
 const showHouseListByTenant = (data) => {
-    const { house } = data || {};
-    const { state } = house || {};
+    const {house} = data || {};
+    const {state} = house || {};
     return [
         HouseState.free,
         HouseState.willFree,
@@ -16,8 +16,8 @@ const showHouseListByTenant = (data) => {
 };
 
 const ableToDeleteHouse = (data) => {
-    const { house } = data || {};
-    const { state } = house || {};
+    const {house} = data || {};
+    const {state} = house || {};
     return [
         HouseState.incomplete,
         HouseState.denied,
@@ -28,7 +28,20 @@ const ableToDeleteHouse = (data) => {
     ].includes(state);
 };
 
+const ableToTransferHouse = (data) => {
+    const {house} = data || {};
+    const {state} = house || {};
+    return [
+        HouseState.shadow,
+        HouseState.rented,
+        HouseState.ordered,
+        HouseState.willFree,
+        HouseState.willOffline
+    ].includes(state);
+};
+
 module.exports = {
     showHouseListByTenant,
-    ableToDeleteHouse
+    ableToDeleteHouse,
+    ableToTransferHouse
 };

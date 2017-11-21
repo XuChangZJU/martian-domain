@@ -4,8 +4,9 @@
 const state = require('./leaseState');
 
 const applyType = {
+    offLeaseImmediate: 1,
     offLease: 3,
-    endLease: 5,
+    endLease: 5
 };
 
 const leaseApplyState = {
