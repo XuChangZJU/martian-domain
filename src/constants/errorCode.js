@@ -17,13 +17,15 @@ module.exports = {
 	errorInvalidAccessTokenOrRefreshToken: {code:985, message:'访问令牌或刷新令牌非法'},
 	errorVersionTooLow: {code: 984, message: '应用的版本过低'},
 	errorDataInconsistency: {code: 983, message: '数据已经过期'},
-	errorDataObsoleted:{code: 982, message: '数据已经被删除'},
+	errorDataObsoleted:{code: 982, message: '数据失效了'},
 
 	errorLegalDataConflict: {code: 799, message: '合法的数据冲突'},
 	errorLegalParamError: {code: 798, message: '合法的参数错误'},
 	errorLegalBodyError: {code: 797, message: '合法的请求错误'},
 
 	chargeExistsError: {code: 800, message: '已存在的缴纳形式'},
+
+    shadowUserLoginError: {code: 795, message: '您的账户尚未激活'}, // 临时的errorCode
 
 	/*// Order相关error
 	errorOrderCouldNotPay: {code: 899, message: '该订单不可支付'},

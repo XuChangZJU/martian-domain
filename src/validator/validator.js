@@ -8,7 +8,7 @@ function isMobile(text) {
 }
 
 function isPassword(text) {
-    return ((text) && (typeof text === "string") && (/^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z0-9!.@]{8,16}$/.test(text)))
+    return ((text) && (typeof text === "string") && (/^[a-zA-Z0-9!.@]{8,16}$/.test(text)))
 }
 
 function isCaptcha(text) {
