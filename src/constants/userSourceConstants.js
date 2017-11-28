@@ -32,6 +32,15 @@ const userSource_Tag_Map = {
     agent: 102
 };
 
+const groupTags = {};
+groupTags.豆瓣小组 = "qrscene_douban";
+groupTags.共享单车 = "qrscene_danche";
+groupTags.头条 = "qrscene_toutiao";
+groupTags.广点通 = "qrscene_guangdiantong";
+groupTags.官网 = "qrscene_backup2";
+groupTags.房东 = "lorder";
+groupTags.中介 = "agent";
+
 const userSourceDecorder = (tagId)=> {
     switch (tagId) {
         case 111:
@@ -52,5 +61,6 @@ const userSourceDecorder = (tagId)=> {
 };
 module.exports = {
     userSource_Tag_Map,
-    userSourceDecorder
+    userSourceDecorder,
+    groupTags
 };
