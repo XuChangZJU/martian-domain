@@ -32,21 +32,21 @@ const userSource_Tag_Map = {
     agent: 102
 };
 
-const userSourceDecorder = (tagName)=> {
-    switch (tagName) {
-        case "qrscene_douban":
+const userSourceDecorder = (tagId)=> {
+    switch (tagId) {
+        case 111:
             return "豆瓣小组";
-        case "qrscene_danche":
+        case 106:
             return "共享单车";
-        case "qrscene_toutiao":
+        case 113:
             return "头条";
-        case "qrscene_guangdiantong":
+        case 116:
             return "广点通";
-        case "qrscene_backup2":
+        case 117:
             return "官网";
-        case "lorder":
+        case 112:
             return "房东";
-        case "agent":
+        case 102:
             return "中介";
     }
 };
