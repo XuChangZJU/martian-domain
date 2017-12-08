@@ -2,8 +2,9 @@
  * Created by Administrator on 2017/7/26.
  */
 const state = require('./keyState');
+const type = require('./keyType');
 
-const decoder = (s) => {
+const decodeState = (s) => {
     const STRING_OF_STATES = {
         [state.stateExpired]: '已过期',
         [state.stateTempKeyExpiredWithoutUse]: '未使用已过期',
@@ -21,7 +22,19 @@ const decoder = (s) => {
     return STRING_OF_STATES[s] || '未知状态';
 };
 
+const decodeType = (t) => {
+    const STRING_OF_TYPE = {
+        [type.credit]: '房东钥匙',
+        [type.master]: '主钥匙',
+        [type.slave]: '分享钥匙',
+        [type.temp]: '临时钥匙',
+        [type.debit]: '租房钥匙',
+    }
+};
+
 module.exports = {
     state,
-    decoder,
+    decodeState,
+    type,
+    decodeType,
 };
