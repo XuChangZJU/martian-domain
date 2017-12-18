@@ -64,7 +64,7 @@ var ableToOffLease = function ableToOffLease(data) {
     if (options) {
         var unAvailableLine = DateUtils.dateAdd(options.precision, -options.volumesForBeToOff, willEndsAt);
         var unAvailableLineTime = unAvailableLine && new Date(unAvailableLine).getTime();
-        if (beginsAt <= Date.now() && leaseState === LeaseState.implementation && [HouseState.rented, HouseState.ordered].includes(houseState) && unAvailableLineTime > Date.now() && [lordId, tenantId].includes(userId)) {
+        if ((lease.treatment === Treatment.personal && [LeaseState.implementation, LeaseState.arrearage, LeaseState.willCompleted, LeaseState.willAborted].includes(leaseState)) || (beginsAt <= Date.now() && leaseState === LeaseState.implementation && [HouseState.rented, HouseState.ordered].includes(houseState) && unAvailableLineTime > Date.now() && [lordId, tenantId].includes(userId))) {
             return true;
         }
     }
