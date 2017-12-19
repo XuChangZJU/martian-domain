@@ -30,10 +30,10 @@ const decodeState = (s) => {
 };
 
 const action = {
-    add: 1,
-    remove: 2,
-    set: 3,
-    clear: 4,
+    add: 21,
+    remove: 22,
+    set: 23,
+    clear: 24,
 };
 
 const decodeAction = (a) => {
