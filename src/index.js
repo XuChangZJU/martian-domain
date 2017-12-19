@@ -35,6 +35,7 @@ module.exports= {
     unitDecoder: require("./constants/unitDecoder"),
     chargeConstant: require("./constants/chargeConstant"),
     staleConstant: require("./constants/staleConstant"),
+    relationConstant: require("./constants/relationConstant"),
 
     dateUtils : require("./utils/dateUtils"),
     stringUtils : require("./utils/stringUtils"),
