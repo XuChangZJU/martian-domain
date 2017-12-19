@@ -35,9 +35,25 @@ const decodeRelation = (r) => {
     return STRING_OF_RELATION[r];
 };
 
+const relationState = {
+    active: 1,
+    willDisabled: 5,
+    disabled: 10
+};
+
+const relationStateDecoder = (state)  => {
+    const RELATION_STATE_STRING = {
+        [relationState.active]: '活跃的',
+        [relationState.willDisabled]: '即将失效的',
+        [relationState.disabled]: '失效的'
+    };
+    return RELATION_STATE_STRING[state];
+};
 
 
 module.exports = {
     relation,
     decodeRelation,
+    relationState,
+    relationStateDecoder
 };
