@@ -30,6 +30,8 @@ const decodeType = (t) => {
         [type.temp]: '临时钥匙',
         [type.debit]: '租房钥匙',
     }
+
+    return STRING_OF_TYPE[s] || '未知类型';
 };
 
 module.exports = {
