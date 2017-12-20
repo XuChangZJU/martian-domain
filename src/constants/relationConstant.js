@@ -19,6 +19,8 @@ const relation = {
     worker: 601,            // 工作人员
 
     floater: 701,           // 临时人员
+
+    rent: 801,             // 出租
 };
 
 const decodeRelation = (r) => {
@@ -29,7 +31,8 @@ const decodeRelation = (r) => {
         [relation.lease]: '租房的',
         [relation.manager]: '管理的',
         [relation.roommate]: '同住的',
-        [relation.floater]: '临时进出的'
+        [relation.floater]: '临时进出的',
+        [relation.rent]: '出租的',
     };
 
     return STRING_OF_RELATION[r];
