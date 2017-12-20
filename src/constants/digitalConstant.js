@@ -63,34 +63,6 @@ const decodeActionState = (s) => {
     return STRING_OF_STATE[s];
 };
 
-const actionResult = {
-    success: 0,
-    keyWordValidateFail: 6,
-    flashWritingError: 7,
-    flashReadingError: 8,
-    actionDisallowed: 9,
-    commandUnrecognized: 10,
-    paramLengthIllegal: 11,
-    dataInconsistency: 12,
-    notEnoughMemory: 13,
-};
-
-const decodeActionResult = (r) => {
-    const STRING_OF_RESULT = {
-        [actionResult.success]: '已成功',
-        [actionResult.keyWordValidateFail]: '验证密码失败',
-        [actionResult.flashReadingError]: '读flash失败',
-        [actionResult.flashWritingError]: '写flash失败',
-        [actionResult.actionDisallowed]: '操作被拒绝',
-        [actionResult.commandUnrecognized]: '不能识别的命令',
-        [actionResult.paramLengthIllegal]: '参数不合法',
-        [actionResult.dataInconsistency]: '数据不一致',
-        [!actionResult.notEnoughMemory]: '内存不足',
-    };
-
-    return STRING_OF_STATE[s];
-
-};
 
 module.exports = {
     state,
@@ -99,7 +71,5 @@ module.exports = {
     decodeAction,
     actionState,
     decodeActionState,
-    actionResult,
-    decodeActionResult,
 };
 
