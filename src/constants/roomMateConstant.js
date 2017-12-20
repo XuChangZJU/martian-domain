@@ -4,13 +4,15 @@
 const mateType = {
     roomMate: 1,
     administrator: 2,
-    tempWorker: 3,
+    worker: 3,
+    tempWorker: 4,
 };
 
 const decodeCategory = (c) => {
     const STRING_OF_CATEGORY = {
         [mateType.roomMate]: '室友',
         [mateType.administrator]: '管理员',
+        [mateType.worker]: '工作人员',
         [mateType.tempWorker]: '临时工作人员'
     };
 
