@@ -8,7 +8,7 @@ const mateType = {
     tempWorker: 4,
 };
 
-const decodeCategory = (c) => {
+const decodeMateType = (c) => {
     const STRING_OF_CATEGORY = {
         [mateType.roomMate]: '室友',
         [mateType.administrator]: '管理员',
@@ -21,5 +21,5 @@ const decodeCategory = (c) => {
 
 module.exports = {
     mateType,
-    decodeCategory,
+    decodeMateType,
 };
