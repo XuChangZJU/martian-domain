@@ -11,6 +11,7 @@ const decode = (type) => {
         [KeyActionType.getKeyWord]: '获取锁原语',
         [KeyActionType.unlock]: '开门',
         [KeyActionType.resetConstantKeyWord]: '重置持久性开锁原语',
+        [KeyActionType.syncTime]: '同步时间',
     };
     return typeText[type];
 }
