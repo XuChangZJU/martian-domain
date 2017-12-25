@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const wordType = {
     DISPOSABLE: "DISPOSABLE",
@@ -33,10 +33,14 @@ const event = {
     DIGITAL_REMOVED: 'DIGITAL_REMOVED',
     DIGITAL_SET: 'DIGITAL_SET',
     DIGITAL_CLEARED: 'DIGITAL_CLEARED',
-    DIGITAL_LOG_GOT: 'DIGITAL_LOG_GOT',
+    DIGITAL_USED_LOG_GOT: 'DIGITAL_USED_LOG_GOT',
 
     TIME_GOT: 'TIME_GOT',
     TIME_SET: 'TIME_SET',
+};
+
+const timerType = {
+    'pcf8536_001': 1,           // pcf8536芯片，设置时输入单字节weekday，4字节time，读取时得到4字节time。time的实际含义见utils/peripheralUtils.js中的decodeTime函数
 };
 
 
@@ -75,4 +79,5 @@ module.exports = {
     event,
     result,
     decodeResult,
+    timerType,
 };

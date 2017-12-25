@@ -8,4 +8,5 @@ module.exports = {
     confirmOutdate: 5,
     clearBonds: 6,
     resetConstantKeyWord: 7,
+    syncTime: 8,
 };
