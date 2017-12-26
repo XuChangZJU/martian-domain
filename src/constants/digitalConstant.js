@@ -11,7 +11,7 @@ const state = {
     mayBeSet: 5,
     toBeRemoved: 6,
     mayBeRemoved: 7,
-    removed: 8,
+    removed: 8
 };
 
 const decodeState = (s) => {
@@ -51,6 +51,7 @@ const actionState = {
     dirty: 1,           // 未同步到锁上
     opaque: 2,          // 或许已同步到锁上
     clean: 3,           // 已同步到锁上
+    failed: 4,           // 同步失败
 };
 
 const decodeActionState = (s) => {
@@ -58,6 +59,7 @@ const decodeActionState = (s) => {
         [state.dirty]: '未同步',
         [state.opaque]: '不明',
         [state.clean]: '已同步',
+        [state.failed]: '失败',
     };
 
     return STRING_OF_STATE[s];
