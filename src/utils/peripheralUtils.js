@@ -2,6 +2,7 @@
  * Created by Administrator on 2017/12/26.
  */
 "use strict";
+const assert = require('assert');
 const { timerType: TimerType } = require('../constants/bleConstant');
 
 function encodeTime(time, timerType) {
