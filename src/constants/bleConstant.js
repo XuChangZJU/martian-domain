@@ -69,7 +69,7 @@ const decodeResult = (r) => {
         [!result.notEnoughMemory]: '内存不足',
     };
 
-    return STRING_OF_RESULT[s];
+    return STRING_OF_RESULT[r];
 
 };
 
