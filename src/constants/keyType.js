@@ -9,4 +9,5 @@ module.exports = {
     temp: 'temp',
     debit: "debit",                // 借方
     credit: "credit",                // 贷方
+    roommate: "roommate",           // 贷方的室友
 };
