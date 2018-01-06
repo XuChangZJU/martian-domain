@@ -9,11 +9,30 @@ const applyType = {
     endLease: 5
 };
 
+const applyTypeDecode = (type)=> {
+    const DATA = {
+        [applyType.offLeaseImmediate]: "立即停租",
+        [applyType.offLease]: "停租",
+        [applyType.endLease]: "退租"
+    };
+    return DATA[type];
+};
+
 const leaseApplyState = {
     init: 7,
     contracted: 8,
     denied: 9,
 };
+
+const leaseApplyStateDecode = (state)=> {
+    const DATA = {
+        [leaseApplyState.init]: "未同意",
+        [leaseApplyState.contracted]: "已同意",
+        [leaseApplyState.denied]: "已拒绝"
+    };
+    return DATA[state];
+};
+
 
 const treatment = {
     personal: 1,    //  影子租约，自己处理
@@ -202,4 +221,6 @@ module.exports = {
     leaseApplyState,
     LeaseUnits,
     decodeTreatment,
+    applyTypeDecode,
+    leaseApplyStateDecode
 };
