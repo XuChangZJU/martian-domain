@@ -11,7 +11,8 @@ const state = {
     mayBeSet: 5,
     toBeRemoved: 6,
     mayBeRemoved: 7,
-    removed: 8
+    removed: 8,
+    cleared: 9
 };
 
 const decodeState = (s) => {
@@ -24,6 +25,7 @@ const decodeState = (s) => {
         [state.toBeRemoved]: '待删除',
         [state.mayBeRemoved]: '或删除',
         [state.removed]: '已删除',
+        [state.cleared]: '已重置'
     };
 
     return STRING_OF_STATE[s];
