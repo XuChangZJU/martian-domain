@@ -4,12 +4,14 @@
 const category = {
     normal: 1,
     creditable: 2,
+    lox: 3,
 };
 
 const decodeCategory = (c) => {
     const STRING_OF_CATEGORY = {
         [category.normal]: '正常',
         [category.creditable]: '租借用',
+        [category.lox]: 'LoX用'
     };
 
     return STRING_OF_CATEGORY[c];
