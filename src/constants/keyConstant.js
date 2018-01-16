@@ -31,7 +31,7 @@ const decodeType = (t) => {
         [type.debit]: '租房钥匙',
     }
 
-    return STRING_OF_TYPE[s] || '未知类型';
+    return STRING_OF_TYPE[t] || '未知类型';
 };
 
 module.exports = {
