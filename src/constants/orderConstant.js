@@ -59,12 +59,12 @@ const STRING_OF_TYPES = {
     [type.endFee]: "费用结算",
     [type.backCoupon]: "过期的红包退还",
     [type.electricityFees]: "电费",
-    [type.electricityFeesTransfer]: "电费中转",
+    [type.electricityFeesTransfer]: "电费结算",
 };
 
 const decodeType = (t) => {
     return STRING_OF_TYPES[t];
-}
+};
 
 module.exports = {
     state,
