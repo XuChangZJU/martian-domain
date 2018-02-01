@@ -45,7 +45,7 @@ const type = {
     backCoupon: 9, //   红包过期退还
     electricityFees: 10, //  电费
     electricityRecharge: 11, //  电费充值
-    electricityFeesTransfer: 12, //  电费中转
+    electricityFeesTransfer: 12, //  电费结算
 };
 
 const STRING_OF_TYPES = {
