@@ -31,6 +31,9 @@ function isNickname(str) {
     return str && typeof str === "string" && str.trim().length > 0 && str.length < 16;
 }
 
+function isDigital(digital) {
+    return /^\d{6,12}$/.test(digital);
+}
 
 
 module.exports = {
@@ -39,6 +42,7 @@ module.exports = {
     isPassword,
     isIdCardNumber,
     isUrl,
-    isNickname
+    isNickname,
+    isDigital,
 };
 
