@@ -33,7 +33,8 @@ const getThresholdPrc = (city) => {
     } else if (Fifth_Tier_Cities.includes(city)) {
         return cityAverageLevel.fifthTierCity
     }
-    throw new Error(`未知城市${city}`);
+    return 0;
+    // throw new Error(`未知城市${city}`);
 };
 
 module.exports = {
