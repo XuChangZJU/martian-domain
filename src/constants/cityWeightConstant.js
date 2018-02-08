@@ -22,25 +22,18 @@ const Forth_Tier_Cities = ["乐山", "湘潭", "遵义", "宿迁", "新乡", "�
 const Fifth_Tier_Cities = ["克拉玛依", "长治", "永州", "绥化", "巴音郭楞", "拉萨", "云浮", "益阳", "百色", "资阳", "荆门", "松原", "凉山", "达州", "伊犁", "广安", "自贡", "汉中", "朝阳", "漯河", "钦州", "贵港", "安顺", "鄂州", "广元", "河池", "鹰潭", "乌兰察布", "铜陵", "昌吉", "衡水", "黔西南", "濮阳", "锡林郭勒", "巴彦淖尔", "鸡西", "贺州", "防城港", "兴安盟", "白山", "三门峡", "忻州", "双鸭山", "楚雄", "新余", "来宾", "淮北", "亳州", "湘西", "吕梁", "攀枝花", "晋城", "延安", "毕节", "张家界", "酒泉", "崇左", "萍乡", "乌海", "伊春", "六盘水", "随州", "德宏", "池州", "黑河", "哈密", "文山", "阿坝", "天水", "辽源", "张掖", "铜仁", "鹤壁", "儋州", "保山", "安康", "白城", "巴中", "普洱", "鹤岗", "莱芜", "阳泉", "甘孜", "嘉峪关", "白银", "临沧", "商洛", "阿克苏", "海西", "大兴安岭", "七台河", "朔州", "铜川", "定西", "迪庆", "日喀则", "庆阳", "昭通", "喀什", "怒江", "海东", "阿勒泰", "平凉", "石嘴山", "武威", "阿拉善盟", "塔城", "林芝", "金昌", "吴忠", "中卫", "陇南", "山南", "吐鲁番", "博尔塔拉", "临夏", "固原", "甘南", "昌都", "阿里", "海南", "和田", "克孜勒苏", "海北", "那曲", "玉树", "黄南", "果洛", "三沙"];
 
 const getThresholdPrc = (city) => {
-    switch (city) {
-        case First_Tier_Cities.includes(city): {
-            return cityAverageLevel.firstTierCity
-        }
-        case Second_Tier_Cities.includes(city): {
-            return cityAverageLevel.secondTierCity
-        }
-        case Third_Tier_Cities.includes(city): {
-            return cityAverageLevel.thirdTierCity
-        }
-        case Forth_Tier_Cities.includes(city): {
-            return cityAverageLevel.forthTierCity
-        }
-        case Fifth_Tier_Cities.includes(city): {
-            return cityAverageLevel.fifthTierCity
-        }
-        default:
-            throw new Error(`未知城市${city}的平均水平`);
+    if (First_Tier_Cities.includes(city)) {
+        return cityAverageLevel.firstTierCity
+    } else if (Second_Tier_Cities.includes(city)) {
+        return cityAverageLevel.secondTierCity
+    } else if (Third_Tier_Cities.includes(city)) {
+        return cityAverageLevel.thirdTierCity
+    } else if (Forth_Tier_Cities.includes(city)) {
+        return cityAverageLevel.forthTierCity
+    } else if (Fifth_Tier_Cities.includes(city)) {
+        return cityAverageLevel.fifthTierCity
     }
+    throw new Error(`未知城市${city}`);
 };
 
 module.exports = {
