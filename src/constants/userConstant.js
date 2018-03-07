@@ -21,6 +21,16 @@ const systemUsers = {
 		id: 1002,
 		mobile: "13000001002",
 		nickname: "帮租侠后台进程"
+	},
+	ussCore: {
+		id: 5,
+		mobile: "13000002001",
+		nickname: "帮租侠商城进程"
+	},
+	ussCoreBackend: {
+		id: 6,
+		mobile: "13000002002",
+		nickname: "帮租侠商城后台进程"
 	}
 };
 
