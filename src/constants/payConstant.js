@@ -30,6 +30,7 @@ function decodeState(s) {
 const origin = {
     alipay: "alipay",
     account: "account",
+    weChat: "weChat",
 };
 
 /**
@@ -53,6 +54,7 @@ const RefundWeightOfOrigins = {
 const STRINGS_OF_ORIGINS = {
     [origin.alipay]: "支付宝",
     [origin.account]: "余额",
+    [origin.weChat]: "微信",
 };
 
 function decodeOrigin(o) {
