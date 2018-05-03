@@ -2,13 +2,17 @@
  * Created by Administrator on 2017/2/16.
  */
 Promise.oneByOne = (promises) => {
+    const result = [];
     function iterator (idx){
         if (idx === promises.length){
-            return Promise.resolve();
+            return Promise.resolve(result);
         }
-        return promises[idx]
+        return promises[idx]()
             .then(
-                ()=>iterator(idx + 1)
+                (r) => {
+                    result.push(r);
+                    return iterator(idx + 1);
+                }
             )
     }
     return iterator(0);
