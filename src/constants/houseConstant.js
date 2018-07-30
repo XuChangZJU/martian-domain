@@ -121,6 +121,10 @@ const verifyResultDecoder = (result) =>{
     return VERIFYRESULTSTRING[result];
 };
 
+const calcTax = (price, ratio) => {
+    return Math.ceil(price * ratio / 10) * 10;
+}
+
 module.exports = {
     state,
     category,
@@ -137,5 +141,6 @@ module.exports = {
     impeachType,
     impeachTypeDecoder,
     verifyResult,
-    verifyResultDecoder
+    verifyResultDecoder,
+    calcTax,
 };
