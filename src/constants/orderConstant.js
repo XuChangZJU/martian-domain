@@ -2,6 +2,8 @@
  * Created by Administrator on 2016/12/25.
  */
 "use strict";
+const origin = require("./externalConstant").origin;
+
 const state = {
     unpaid: 1,
     paying: 3,
@@ -45,7 +47,8 @@ const type = {
     backCoupon: 9, //   红包过期退还
     electricityFees: 10, //  电费
     electricityRecharge: 11, //  电费充值
-    electricityFeesTransfer: 12, //  电费中转
+    electricityFeesTransfer: 12, //  电费结算
+    weChatProOrder: 13, //  微信商城订单
 };
 
 const STRING_OF_TYPES = {
@@ -59,16 +62,32 @@ const STRING_OF_TYPES = {
     [type.endFee]: "费用结算",
     [type.backCoupon]: "过期的红包退还",
     [type.electricityFees]: "电费",
-    [type.electricityFeesTransfer]: "电费中转",
+    [type.electricityFeesTransfer]: "电费结算",
+    [type.weChatProOrder]: "订单",
 };
 
 const decodeType = (t) => {
     return STRING_OF_TYPES[t];
-}
+};
+
+
+const getOrderTypesByPlf = (platform)=> {
+    switch (platform) {
+        case origin.weChat:
+            return [];
+        case origin.weChatPro:
+            return [type.weChatProOrder];
+        case origin.martian:
+            return [type.rent, type.deposit, type.looking, type.compensate, type.tax, type.coupon, type.lock, type.endFee, type.backCoupon, type.electricityFees, type.electricityFeesTransfer];
+        default:
+            return [type.rent, type.deposit, type.looking, type.compensate, type.tax, type.coupon, type.lock, type.endFee, type.backCoupon, type.electricityFees, type.electricityFeesTransfer];
+    }
+};
 
 module.exports = {
     state,
     type,
     decodeState,
     decodeType,
+    getOrderTypesByPlf
 };

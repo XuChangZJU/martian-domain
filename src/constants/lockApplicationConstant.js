@@ -4,6 +4,7 @@
 "use strict";
 const state = {
     unpaid: 1,
+    inShopCart: 2,
     paid: 10,
     gettingRidOf: 20,
     sending: 30,
@@ -21,6 +22,7 @@ const state = {
 };
 
 const STRING_OF_STATES = {
+    [state.inShopCart]: "购物车中",
     [state.unpaid]: "未支付",
     [state.paid]: "已支付",
     [state.gettingRidOf]: "备货中",
