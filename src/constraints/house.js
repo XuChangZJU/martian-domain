@@ -33,13 +33,14 @@ const ableToTransferHouse = (data) => {
     const {house} = data || {};
     const {state} = house || {};
     const {category} = house || {};
-    return ![
-        HouseState.shadow,
-        HouseState.rented,
-        HouseState.ordered,
-        HouseState.willFree,
-        HouseState.willOffline
-    ].includes(state) && [HouseCategory.house, HouseCategory.flatShare, HouseCategory.apartment, HouseCategory.tavern, HouseCategory.hotel].includes(category);
+    return [HouseCategory.house, HouseCategory.flatShare, HouseCategory.apartment, HouseCategory.tavern, HouseCategory.hotel].includes(category);
+    // return ![
+    //     HouseState.shadow,
+    //     HouseState.rented,
+    //     HouseState.ordered,
+    //     HouseState.willFree,
+    //     HouseState.willOffline
+    // ].includes(state) && [HouseCategory.house, HouseCategory.flatShare, HouseCategory.apartment, HouseCategory.tavern, HouseCategory.hotel].includes(category);
 };
 
 module.exports = {
