@@ -77,7 +77,7 @@ const LeaseUnits = {
             volumesForBeToOff: 7,
 
             tenantTaxRatio: 0.03,												// 平台对所有租金和违约金的抽税
-            lordTaxRatio: 0.03,												// 平台对所有租金和违约金的抽税
+            lordTaxRatio: 0.01,												// 平台对所有租金和违约金的抽税
             shadowTenantTaxRatioByPersonal: 0,
             shadowLordTaxRatioByPersonal: 0,
             shadowTenantTaxRatioByPlatform: 0.03,
@@ -106,7 +106,7 @@ const LeaseUnits = {
             volumesForBeToOff: 7,
 
             tenantTaxRatio: 0.03,												// 平台对所有租金和违约金的抽税
-            lordTaxRatio: 0.03,												// 平台对所有租金和违约金的抽税
+            lordTaxRatio: 0.01,												// 平台对所有租金和违约金的抽税
             shadowTenantTaxRatioByPersonal: 0,
             shadowLordTaxRatioByPersonal: 0,
             shadowTenantTaxRatioByPlatform: 0.03,
@@ -134,7 +134,7 @@ const LeaseUnits = {
             volumesForBeToOff: 7,
 
             tenantTaxRatio: 0.03,												// 平台对所有租金和违约金的抽税
-            lordTaxRatio: 0.03,												// 平台对所有租金和违约金的抽税
+            lordTaxRatio: 0.01,												// 平台对所有租金和违约金的抽税
             shadowTenantTaxRatioByPersonal: 0,
             shadowLordTaxRatioByPersonal: 0,
             shadowTenantTaxRatioByPlatform: 0.03,
@@ -162,9 +162,7 @@ const LeaseUnits = {
             volumesForBeToOff: 7,
 
             tenantTaxRatio: 0.03,
-            lordTaxRatio: 0.03,
-            shadowTenantTaxRatio: 0,
-            shadowLordTaxRatio: 0.01,
+            lordTaxRatio: 0.01,
             shadowTenantTaxRatioByPersonal: 0,
             shadowLordTaxRatioByPersonal: 0,
             shadowTenantTaxRatioByPlatform: 0,
@@ -195,8 +193,10 @@ const LeaseUnits = {
 
             volumesForBeToOff: 4,
             volumesForViolate: 15,
+
+            
             tenantTaxRatio: 0.03,												// 平台对所有租金和违约金的抽税
-            lordTaxRatio: 0.03,												// 平台对所有租金和违约金的抽税
+            lordTaxRatio: 0.01,												// 平台对所有租金和违约金的抽税
             shadowTenantTaxRatioByPersonal: 0,
             shadowLordTaxRatioByPersonal: 0,
             shadowTenantTaxRatioByPlatform: 0.03,
