@@ -44,8 +44,8 @@ const decode = require('./leaseStateDecoder');
 
 const decodeTreatment = (s) => {
     const DATA = {
-        [treatment.personal]: '房东自助',
-        [treatment.platform]: '平台助收',
+        [treatment.personal]: '自主收取',
+        [treatment.platform]: '线上缴纳',
         [treatment.general]: '正常流程',
     };
 
