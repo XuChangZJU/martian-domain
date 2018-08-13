@@ -165,8 +165,8 @@ const LeaseUnits = {
             lordTaxRatio: 0.01,
             shadowTenantTaxRatioByPersonal: 0,
             shadowLordTaxRatioByPersonal: 0,
-            shadowTenantTaxRatioByPlatform: 0,
-            shadowLordTaxRatioByPlatform: 0.01,
+            shadowTenantTaxRatioByPlatform: 0.03,
+            shadowLordTaxRatioByPlatform: 0.01
         },
         "s": {
             precision: 's',
@@ -194,7 +194,7 @@ const LeaseUnits = {
             volumesForBeToOff: 4,
             volumesForViolate: 15,
 
-            
+
             tenantTaxRatio: 0.03,												// 平台对所有租金和违约金的抽税
             lordTaxRatio: 0.01,												// 平台对所有租金和违约金的抽税
             shadowTenantTaxRatioByPersonal: 0,
