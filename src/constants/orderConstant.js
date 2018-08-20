@@ -6,6 +6,7 @@ const origin = require("./externalConstant").origin;
 
 const state = {
     unpaid: 1,
+    unpaid2: 2,     //  自动支付，但不允许余额扣为负数时（autoPay === true， mustPay === false），应当更改order状态以区分unpaid
     paying: 3,
     partialPaid: 5,
     paid: 10,
@@ -19,6 +20,7 @@ const state = {
 
 const STRING_OF_STATES = {
     [state.unpaid]: '待支付',
+    [state.unpaid2]: '待支付',
     [state.paying]: '支付中',
     [state.partialPaid]: '部分支付',
     [state.paid]: '支付成功',
