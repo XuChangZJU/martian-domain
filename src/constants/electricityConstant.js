@@ -23,6 +23,7 @@ const state = {
     init: 1,
     unpaid: 2,
     paid: 3,
+    paidLater: 4,
     historicalUnknown: 101,
 };
 
@@ -31,6 +32,7 @@ const decodeState = (s) => {
         [state.init]: '初始',
         [state.unpaid]: '未支付',
         [state.paid]: '已支付完成',
+        [state.paidLater]: '补支付完成',
         [state.historicalUnknown]: '历史不明状态',
     };
 
