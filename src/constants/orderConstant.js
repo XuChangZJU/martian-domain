@@ -64,6 +64,7 @@ const STRING_OF_TYPES = {
     [type.endFee]: "费用结算",
     [type.backCoupon]: "过期的红包退还",
     [type.electricityFees]: "电费",
+    [type.electricityRecharge]: "电费充值",
     [type.electricityFeesTransfer]: "电费结算",
     [type.weChatProOrder]: "订单",
 };
