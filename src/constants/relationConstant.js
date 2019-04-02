@@ -32,7 +32,7 @@ const decodeRelation = (r) => {
         [relation.roommate]: '同住的',
         [relation.worker]: '工作的',
         [relation.floater]: '临时进出的',
-        [relation.trustee]: '管理的',
+        [relation.trustee]: '托管的',
     };
 
     return STRING_OF_RELATION[r];
