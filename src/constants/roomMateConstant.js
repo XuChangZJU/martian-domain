@@ -6,6 +6,7 @@ const mateType = {
     administrator: 2,
     worker: 3,
     tempWorker: 4,
+    trustee: 5
 };
 
 const decodeMateType = (c) => {
@@ -13,7 +14,8 @@ const decodeMateType = (c) => {
         [mateType.roomMate]: '室友',
         [mateType.administrator]: '管理员',
         [mateType.worker]: '长期工作人员',
-        [mateType.tempWorker]: '临时人员'
+        [mateType.tempWorker]: '临时人员',
+        [mateType.trustee]: '托管员'
     };
 
     return STRING_OF_CATEGORY[c];

@@ -123,7 +123,13 @@ const verifyResultDecoder = (result) =>{
 
 const calcTax = (price, ratio) => {
     return Math.ceil(price * ratio / 10) * 10;
-}
+};
+
+const MobileFrom = {
+    lord: 1,
+    administrator: 2,
+    trustee: 3
+};
 
 module.exports = {
     state,
@@ -143,4 +149,5 @@ module.exports = {
     verifyResult,
     verifyResultDecoder,
     calcTax,
+    MobileFrom
 };
